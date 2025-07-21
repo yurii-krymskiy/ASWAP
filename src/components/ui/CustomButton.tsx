@@ -20,6 +20,7 @@ const CustomButton = ({ text }: { text: string }) => {
         active:scale-95
         cursor-pointer
         w-fit
+        z-10
       "
     >
       {text}
