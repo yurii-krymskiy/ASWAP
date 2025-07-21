@@ -42,6 +42,19 @@
     background: linear-gradient(160deg, #0D0D0D00, #3C3C3C) padding-box,
                 linear-gradient(180deg, rgb(13, 13, 13) 0%, #171717 100%) border-box;
   }
-}
 
+  .gradientDiv {
+    background: 
+      radial-gradient(52.98% 31.66% at 50% 1.71%, #EDEB01 0%, rgba(237, 235, 1, 0) 100%) padding-box,
+      radial-gradient(28.57% 26.19% at 50% 4.61%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%) border-box;
+    
+    border: 1px solid;
+    border: 1px solid rgba(26, 26, 26, 0.442);
+    border-image-slice: 1;
+    border-radius: 22px;
+    
+    backdrop-filter: blur(47.15px);
+    -webkit-backdrop-filter: blur(47.15px); 
+  }
+}
 
