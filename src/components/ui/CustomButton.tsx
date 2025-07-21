@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const CustomButton = ({ text }: { text: string }) => {
   return (
@@ -19,11 +19,12 @@ const CustomButton = ({ text }: { text: string }) => {
         hover:shadow-md
         active:scale-95
         cursor-pointer
+        w-fit
       "
     >
       {text}
     </button>
-  )
-}
+  );
+};
 
-export default CustomButton
+export default CustomButton;

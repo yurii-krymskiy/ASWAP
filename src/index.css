@@ -14,3 +14,10 @@
     font-family: "Inter", sans-serif;
   }
 }
+
+
+@layer utilities {
+  .gradien-tile {
+    font-family: "Kairos Sans", sans-serif;
+  }
+}

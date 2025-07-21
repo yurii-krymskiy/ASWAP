@@ -1,0 +1,74 @@
+@keyframes scroll-companies {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100px * 6));
+  }
+}
+
+/* Slider Container */
+.slider-companies {
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  overflow: hidden;
+  position: relative;
+  width: 600px;
+}
+
+.slider-companies::before,
+.slider-companies::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 80px; /* Adjust based on how much fade you want */
+  z-index: 2;
+  pointer-events: none;
+}
+
+.slider-companies::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), transparent);
+}
+
+.slider-companies::after {
+  right: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), transparent);
+}
+
+
+.slider-companies::before {
+  left: 0;
+  top: 0;
+}
+
+.slider-companies::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slide-companies-track {
+  display: flex;
+  width: calc(100px * 12);
+  animation: scroll-companies 40s linear infinite;
+}
+
+/* Single Slide */
+.slide-companies {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  flex-shrink: 0;
+}
+
+.slider-companies:hover .slide-companies-track {
+  animation-play-state: paused;
+}
+
+.playment-methods-images {
+  width: 83px;
+  height: 48px;
+}
