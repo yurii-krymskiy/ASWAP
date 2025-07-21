@@ -37,6 +37,11 @@
       0 4px 8px rgba(0, 0, 0, 0.2), 
       inset 0 1px 4px rgba(255, 255, 255, 0.15);
   }
+
+  .step-circle {
+    background: linear-gradient(160deg, #0D0D0D00, #3C3C3C) padding-box,
+                linear-gradient(180deg, rgb(13, 13, 13) 0%, #171717 100%) border-box;
+  }
 }
 
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CurrencyDropdown from "../../../components/ui/CurrencyDropdown";
+import CurrencyDropdown from "../../../../components/ui/CurrencyDropdown";
 
 const ExchangeBlock = () => {
   const [side, setSide] = useState<"Sell" | "Buy">("Buy");

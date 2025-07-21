@@ -1,22 +1,28 @@
 import React from "react";
 
-const InfoTitle = ({ text }: { text: string }) => {
+const InfoTitle = ({ text, isDot }: { text: string, isDot: boolean }) => {
   return (
     <div
-      className="
-        flex flex-row items-center gap-1
-        px-[14px] py-[10px]
-        text-[16px] font-medium text-[#AEAEB8]
+      className={`
+        flex flex-row items-center gap-1.5
+        px-[14px]
+        font-medium text-[#AEAEB8]
         bg-[#FFFFFF0D] border border-[#FFFFFF12]
         backdrop-blur-[20px] rounded-[100px]
-        w-fit mb-[32px]
-      "
+        w-fit
+        ${isDot ? "text-[14px] py-[6px]" : "text-[16px] py-[10px] mb-[32px]"}
+      `}
     >
-      <img
-        src="/icons/medal-star.svg"
-        alt="medal-star"
-        className="w-[24px] h-[24px]"
-      />
+      {isDot ? (
+        <div className="w-[6px] h-[6px] bg-[linear-gradient(180deg,_#FFFD00_-5.87%,_#999800_105.45%)] rounded-[1px]">
+        </div>
+      ) : (
+        <img
+          src="/icons/medal-star.svg"
+          alt="medal-star"
+          className="w-[24px] h-[24px]"
+        />
+      )}
       {text}
     </div>
   );

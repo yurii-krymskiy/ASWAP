@@ -1,8 +1,11 @@
 import React from "react";
 
-const GradientTitle = ({ text }: { text: string }) => {
+const GradientTitle = ({ text, size }: { text: string, size: string }) => {
   return (
-    <h1
+    <p
+      style={{
+        fontSize: `${size}px`
+      }}
       className="
         text-[64px]
         font-[500]
@@ -16,7 +19,7 @@ const GradientTitle = ({ text }: { text: string }) => {
       "
     >
       {text}
-    </h1>
+    </p>
   );
 };
 
