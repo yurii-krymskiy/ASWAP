@@ -13,14 +13,29 @@
     background-color: #030303;
     font-family: "Inter", sans-serif;
   }
-}
 
-
-@layer utilities {
-  .gradien-tile {
-    font-family: "Kairos Sans", sans-serif;
+  h1 {
+    @apply text-[24px] font-medium leading-[110%] tracking-[-0.02em];
   }
 
+  h2 {
+    @apply text-[18px] font-medium leading-normal tracking-normal;
+  }
+
+  .p1 {
+    @apply text-[16px] font-normal leading-[150%] tracking-normal;
+  }
+
+  .p2 {
+    @apply text-[14px] font-normal leading-[150%] tracking-[-0.02em];
+  }
+
+  .p3 {
+    @apply text-[12px] font-normal leading-[130%] tracking-normal;
+  }
+}
+
+@layer components {
   .custom-glass-card {
     border-radius: 16px; 
     padding: 12px;
@@ -36,6 +51,25 @@
     box-shadow:
       0 4px 8px rgba(0, 0, 0, 0.2), 
       inset 0 1px 4px rgba(255, 255, 255, 0.15);
+  }
+  @keyframes rotate-counter {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+
+  .rotate-counter {
+    animation: rotate-counter 10s linear infinite;
+    transform-origin: center center;
+  }
+}
+
+@layer utilities {
+  .gradien-tile {
+    font-family: "Kairos Sans", sans-serif;
   }
 
   .step-circle {
@@ -56,19 +90,4 @@
     backdrop-filter: blur(47.15px);
     -webkit-backdrop-filter: blur(47.15px); 
   }
-}
-
-
-@keyframes rotate-counter {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-360deg);
-  }
-}
-
-.rotate-counter {
-  animation: rotate-counter 10s linear infinite;
-  transform-origin: center center;
 }

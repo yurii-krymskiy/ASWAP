@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import CurrencyDropdown from "../../../../components/ui/CurrencyDropdown";
+import GlassCardWrapper from "../../../../components/ui/GlassCardWrapper";
 
 const ExchangeBlock = () => {
   const [side, setSide] = useState<"Sell" | "Buy">("Buy");
@@ -7,8 +8,8 @@ const ExchangeBlock = () => {
   const [currency, setCurrency] = useState("USDT");
 
   return (
-    <div className="custom-glass-card w-fit">
-      <div className="bg-[#0D0D0D] w-[500px] rounded-[16px] p-[24px]">
+    <GlassCardWrapper width="500">
+      <div className="p-[24px]">
         <div
           className="
             bg-[rgba(255,255,255,0.05)] rounded-[12px] border border-[rgba(255,255,255,0.07)] backdrop-blur-[20px] 
@@ -100,7 +101,7 @@ const ExchangeBlock = () => {
           <img className="cursor-pointer" src="/icons/arrow-narrow-right.svg" alt="arrow-narrow-right" />
         </div>
       </div>
-    </div>
+    </GlassCardWrapper>
   );
 };
 

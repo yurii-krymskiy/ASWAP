@@ -62,7 +62,7 @@ const ProgressSteps = () => {
 
       {/* Timeline fill line */}
       <div
-        className="absolute left-[24px] w-[4px] bg-[#FFFD00] origin-top"
+        className="absolute left-[24px] w-[4px] bg-[#FFFD00] origin-top shadow-[0_0_12px_4px_rgba(255,253,0,0.5)]"
         style={{ height: fillHeight }}
       />
 

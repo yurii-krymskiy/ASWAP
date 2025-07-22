@@ -4,7 +4,8 @@ import CustomButton from "../../components/ui/CustomButton";
 import PaymentCarousel from "./components/PaymentCarousel/PaymentCarousel";
 import ExchangeBlock from "./components/ExchangeBlock/ExchangeBlock";
 import ProgressSteps from "./components/ProgressCard/ProgressSteps";
-import HomeCard from "./components/HomeCard/HomeCard";
+import HomeCardGrid from "./components/HomeCardGrid/HomeCardGrid";
+import GlassCardWrapper from "../../components/ui/GlassCardWrapper";
 
 const Home = () => {
   return (
@@ -32,7 +33,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="flex flex-col pt-[100px] items-center mb-[107px]">
+      <section className="flex flex-col pt-[100px] items-center mb-[50px]">
         <div className="text-center mb-[64px]">
           <GradientTitle text="Purchase Crypto in Easy Steps" size="48" />
           <p className="text-[#AEAEB8] text-[16px] mt-[24px]">Send, store, and receive BTC, ETH, USDT and more in your free and secure DEX.</p>
@@ -41,7 +42,7 @@ const Home = () => {
         <ProgressSteps />
       </section>
 
-      <section className="flex flex-col relative overflow-hidden">
+      <section className="flex flex-col relative overflow-hidden mb-[200px]">
         <div className="absolute rotate-counter w-full top-[50px]">
           <img src="/bg/orbit.svg" alt="orbit" className="object-contain w-full" />
         </div>
@@ -59,39 +60,73 @@ const Home = () => {
         </div>
 
         <div className="gradientDiv p-[15px]">
-          <div className="bg-[#0D0D0D] w-full h-full rounded-[22px] border border-[#161616] grid grid-cols-3 p-8 gap-6">
-            <HomeCard
-              img="/images/home-block-2.png"
-              title="Open Source"
-              text="ASWAP is a free and open-source software. Anyone can see, verify and even contribute to the code."
-            />
-            <HomeCard
-              img="/images/home-block-1.png"
-              title="Strong Privacy"
-              text="Neither the public nor developers can breach your privacy. Use of coinjoins, block filters and the Tor anonymity network guarantee that."
-            />
-            <HomeCard
-              img="/images/home-block-6.png"
-              title="Self-Custodial"
-              text="Not your keys, not your bitcoin. You're in full control of your private keys."
-            />
-            <HomeCard
-              img="/images/home-block-5.png"
-              title="Simple"
-              text="With ASWAP good privacy on crypto just works. Use a simple yet functional wallet with all the features you'd expect."
-            />
-            <HomeCard
-              img="/images/home-block-4.png"
-              title="Accessible"
-              text="CoinJoin with any amount, from 5,000 sats to BTC and anything in between. ASWAP is the coinjoin protocol under the hood that makes it work."
-            />
-            <HomeCard
-              img="/images/home-block-3.png"
-              title="Affordable"
-              text="Next generation coinjoin protocol, designed with blockspace efficiency as a priority so you save on mining fees."
-            />
+          <HomeCardGrid />
+        </div>
+      </section>
+
+      <section className="flex flex-row">
+        <div className="basis-[50%] flex justify-center">
+          <GlassCardWrapper width="520">
+            <div className="bg-[url('/bg/dots-top.png'),url('/bg/dots-bottom.png')] bg-no-repeat bg-[length:100%] bg-[position:top,left_bottom] p-[24px]">
+              <div className="p-[24px, 24px, 0, 24px]">
+                <GradientTitle
+                  size="18"
+                  text="Privacy Progress"
+                />
+                <p className=".p2 text-[#AEAEB8] mt-3 mb-6">Empowering your digital freedom with private, secure, and transparent technologies</p>
+              </div>
+              <div className="flex items-center justify-center relative my-8 w-[90%] m-auto">
+                <div className="absolute flex flex-col items-center justify-center z-20 inset-0">
+                  <div className="flex items-center flex-row gap-2 mb-2">
+                    <img src="/icons/shield-tick.svg" alt="shield-tick" />
+                    <GradientTitle size="24" text="99%" />
+                  </div>
+                  <p className="p2 text-[#AEAEB8]">0.8943894894 BTC</p>
+                </div>
+                <div
+                  className="absolute inset-0 z-0 rounded-full"
+                  style={{
+                    background: `radial-gradient(circle, 
+                      rgba(111,207,151,0) 25%, 
+                      rgba(111,207,151,0.3) 35%, 
+                      rgba(111,207,151,0.5) 45%, 
+                      rgba(56,105,77,0.5) 55%, 
+                      rgba(56,105,77,0.3) 70%, 
+                      rgba(56,105,77,0) 85%)`,
+                    filter: "blur(8px)",
+                  }}
+                />
+                <img src="/images/block-circle.png" alt="block-circle" className="z-0" />
+              </div>
+            </div>
+          </GlassCardWrapper>
+        </div>
+
+        <div className="basis-[45%] flex flex-col gap-10 justify-center">
+          <GradientTitle text="A Coinjoin is..." size="48" />
+          <div className="flex flex-row items-start gap-4">
+            <img src="/icons/shield-tick-2.svg" alt="shield-tick-2" />
+            <p className=".p1 text-[#AEAEB8]">
+              A collaborative crypto transaction, In a coinjoin, many different users coordinate the creation of one single transaction with inputs and outputs from different users.
+            </p>
+          </div>
+          <div className="flex flex-row items-start gap-4">
+            <img src="/icons/shield-tick-2.svg" alt="shield-tick-2" />
+            <p className=".p1 text-[#AEAEB8]">
+              A coinjoin transaction has many standard outputs of the same amounts, which makes it very hard to track them back to their initial inputs.
+            </p>
+          </div>
+          <div className="flex flex-row items-start gap-4">
+            <img src="/icons/shield-tick-2.svg" alt="shield-tick-2" />
+            <p className=".p1 text-[#AEAEB8]">
+              Coinjoins allow users to conceal the history of their coins from the public to make their UTXOs fungible on the public Bitcoin network.
+            </p>
           </div>
         </div>
+      </section>
+
+      <section>
+                  
       </section>
     </main>
   );
