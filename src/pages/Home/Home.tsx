@@ -7,7 +7,6 @@ import ProgressSteps from "./components/ProgressCard/ProgressSteps";
 import HomeCard from "./components/HomeCard/HomeCard";
 
 const Home = () => {
-
   return (
     <main className="w-screen max-w-[1400px] mx-auto px-[40px] mt-[78px]">
       <section className="flex flex-row w-full justify-between">
@@ -26,7 +25,7 @@ const Home = () => {
         <div className="flex flex-col basis-[40%] items-center justify-center">
           <div className="
             bg-[url('/bg/dots.png')] bg-no-repeat bg-contain bg-top 
-            absolute h-[800px] w-1/2 top-0 z-0
+            absolute h-[800px] w-[40%] top-0 z-0
           "></div>
 
           <ExchangeBlock />
@@ -42,8 +41,10 @@ const Home = () => {
         <ProgressSteps />
       </section>
 
-      <section className="flex flex-col">
-
+      <section className="flex flex-col relative overflow-hidden">
+        <div className="absolute rotate-counter w-full top-[50px]">
+          <img src="/bg/orbit.svg" alt="orbit" className="object-contain w-full" />
+        </div>
         <div className="bg-[url('/bg/dark-circle.png')] bg-no-repeat bg-cover h-[450px] flex flex-col justify-end items-center relative">
           <GradientTitle text="Why Aswap Wallet?" size="48" />
           <p className="text-[16px] text-[#AEAEB8] mt-[24px]">Your secure gateway to fast, private, and fully decentralized P2P Platform.</p>
