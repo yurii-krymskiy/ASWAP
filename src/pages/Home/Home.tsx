@@ -6,6 +6,7 @@ import ExchangeBlock from "./components/ExchangeBlock/ExchangeBlock";
 import ProgressSteps from "./components/ProgressCard/ProgressSteps";
 import HomeCardGrid from "./components/HomeCardGrid/HomeCardGrid";
 import GlassCardWrapper from "../../components/ui/GlassCardWrapper";
+import FAQ from "../../components/layout/FAQ";
 
 const Home = () => {
   return (
@@ -64,7 +65,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="flex flex-row">
+      <section className="flex flex-row mb-[100px]">
         <div className="basis-[50%] flex justify-center">
           <GlassCardWrapper width="520">
             <div className="bg-[url('/bg/dots-top.png'),url('/bg/dots-bottom.png')] bg-no-repeat bg-[length:100%] bg-[position:top,left_bottom] p-[24px]">
@@ -125,8 +126,19 @@ const Home = () => {
         </div>
       </section>
 
-      <section>
-                  
+      <section className="flex flex-row justify-between">
+        <div className="absolute bottom-0 right-0 w-[200px] h-[800px] bg-[url('/bg/dots.right.png')] bg-no-repeat bg-right bg-contain pointer-events-none z-0" />
+
+        <div className="basis-[40%] z-10">
+          <GradientTitle text="Got Questions? We've Got Answers!" size="48" />
+          <p className=".p1 text-[#AEAEB8] mt-6">
+            Send, store, and receive BTC, ETH, USDT and more in your free and secure ASWAP P2P Platform.
+          </p>
+        </div>
+
+        <div className="basis-[50%] z-10">
+          <FAQ />
+        </div>
       </section>
     </main>
   );
