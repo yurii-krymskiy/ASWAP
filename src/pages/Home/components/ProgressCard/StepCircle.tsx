@@ -1,4 +1,3 @@
-import React from "react";
 import GradientTitle from "../../../../components/ui/GradientTitle";
 
 const StepCircle = ({ number }: { number: string }) => (

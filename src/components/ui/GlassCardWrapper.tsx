@@ -1,4 +1,4 @@
-import React, { type ReactNode } from "react";
+import { type ReactNode } from "react";
 
 const GlassCardWrapper = ({ children, width }: { children: ReactNode, width: string }) => {
   return (

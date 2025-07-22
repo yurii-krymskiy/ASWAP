@@ -1,5 +1,3 @@
-import React from "react";
-
 const InfoTitle = ({ text, isDot }: { text: string, isDot: boolean }) => {
   return (
     <div

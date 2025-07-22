@@ -1,5 +1,3 @@
-import React from "react";
-
 const GradientTitle = ({ text, size }: { text: string, size: string }) => {
   return (
     <p

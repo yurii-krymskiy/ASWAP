@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import CurrencyDropdown from "../../../../components/ui/CurrencyDropdown";
 import GlassCardWrapper from "../../../../components/ui/GlassCardWrapper";
 

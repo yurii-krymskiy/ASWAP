@@ -1,4 +1,3 @@
-import React from "react";
 import GradientTitle from "../../../../components/ui/GradientTitle";
 
 const HomeCard = ({ img, title, text }: { img: string, title: string, text: string }) => {
