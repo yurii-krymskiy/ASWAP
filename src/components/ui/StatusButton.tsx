@@ -1,4 +1,5 @@
 import React from "react";
+import clsx from "clsx";
 
 interface StatusButtonProps {
   variant: "success" | "danger";
@@ -9,20 +10,15 @@ interface StatusButtonProps {
 const StatusButton = ({ variant, text, icon }: StatusButtonProps) => {
   const isDanger = variant === "danger";
 
-  const borderColor = isDanger ? "#DC3434" : "#3DF097";
-  const textColor = borderColor;
-  const bgHover = isDanger ? "#DC34341A" : "#3DF0971A";
-  const shadowColor = borderColor;
-
   return (
     <button
-      className={`
-        bg-transparent border-[${borderColor}] border rounded-[4px]
-        text-[${textColor}] h-[34px] flex items-center gap-2 px-3
-        text-[14px] leading-[120%] cursor-pointer font-medium
-        transition-all duration-300 ease-in-out
-        hover:bg-[${bgHover}] hover:scale-105 hover:shadow-[0_0_1px_${shadowColor}]
-      `}
+      className={clsx(
+        "bg-transparen border rounded-[4px] h-[34px] flex items-center gap-2 px-3 text-[14px] leading-[120%] cursor-pointer font-medium transition-all duration-300 ease-in-out ",
+        {
+          "border-[#DC3434] text-[#DC3434] hover:bg-[#DC34341A]": isDanger,
+          "border-[#3DF097] text-[#3DF097] hover:bg-[#3DF0971A]": !isDanger,
+        }
+      )}
     >
       <img src={icon} alt={`${text.toLowerCase().replace(/\s+/g, "-")}-icon`} />
       {text}
