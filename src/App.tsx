@@ -4,6 +4,7 @@ import Footer from "./components/layout/Footer";
 import Home from "./pages/Home/Home";
 import BuyCrypto from "./pages/BuyCrypto/BuyCrypto";
 import Swap from "./pages/Swap/Swap";
+import OnlineAds from "./pages/OnlineAds/OnlineAds";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/buy" element={<BuyCrypto />} />
         <Route path="/swap" element={<Swap />} />
+        <Route path="/online-ads" element={<OnlineAds />} />
       </Routes>
       <Footer />
     </div>

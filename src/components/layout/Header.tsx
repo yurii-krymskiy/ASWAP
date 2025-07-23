@@ -23,11 +23,14 @@ const Header = () => {
             <li className="cursor-pointer">
               <Link to="/coinjoin">CoinJoin</Link>
             </li>
+            <li className="cursor-pointer">
+              <Link to="/online-ads">Online ads</Link>
+            </li>
           </ul>
         </nav>
       </div>
 
-      <CustomButton text="Connect Wallet" />
+      <CustomButton text="Connect Wallet" height="40" />
     </header>
   );
 };

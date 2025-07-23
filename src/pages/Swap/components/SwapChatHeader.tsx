@@ -1,5 +1,5 @@
 import React from "react";
-import StatusButton from "../../../components/ui/StatusButton";
+import BorderButton from "../../../components/ui/BorderButton";
 
 const SwapChatHeader = () => {
   return (
@@ -19,14 +19,14 @@ const SwapChatHeader = () => {
         </div>
       </div>
       <div className="flex flex-row gap-3">
-        <StatusButton
-          variant="danger"
+        <BorderButton
+          variant="red"
           text="Cancel Deal"
           icon="/icons/cross-circle.svg"
         />
 
-        <StatusButton
-          variant="success"
+        <BorderButton
+          variant="green"
           text="Mark as Paid"
           icon="/icons/check-circle.svg"
         />

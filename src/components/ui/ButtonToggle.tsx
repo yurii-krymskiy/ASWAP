@@ -22,7 +22,7 @@ const ButtonToggle: React.FC<Props> = ({ options, onChange, defaultValue }) => {
     }`;
 
   return (
-    <div className="bg-[#0F0F0F] border border-[#181818] p-1 rounded-[8px] flex gap-2">
+    <div className="bg-[#0F0F0F] border border-[#181818] p-1 rounded-[8px] flex gap-2 w-fit">
       {options.map((coin) => (
         <button
           key={coin}

@@ -1,9 +1,12 @@
-const CustomButton = ({ text }: { text: string }) => {
+const CustomButton = ({ text, height, icon, padding = "20" }: { text: string, height: string, icon?: string, padding?: string }) => {
   return (
     <button
+      style={{
+        height: `${height}px`,
+        paddingInline: `${padding}px`
+      }}
       className="
         bg-[#C5C300]
-        px-5 py-2.5
         text-[#020313]
         rounded-[4px]
         text-[16px]
@@ -19,8 +22,10 @@ const CustomButton = ({ text }: { text: string }) => {
         cursor-pointer
         w-fit
         z-10
+        flex flex-row items-center
       "
     >
+      {icon && (<img src={icon} alt="icon" className="mr-2" />)}
       {text}
     </button>
   );

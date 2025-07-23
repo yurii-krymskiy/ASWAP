@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
+import GridButton from "../../../components/ui/GridButton";
+import SideButton from "../../../components/ui/SideButton";
 
 const BuyCryptoGrid = () => {
   return (
@@ -22,53 +24,11 @@ const BuyCryptoGrid = () => {
           <p className="text-[16px] text-[#E5FFF2] leading-[150%]">200.00 USDT</p>
           <p className="text-[16px] text-[#E5FFF2] leading-[150%]">200.00 UAH - 870.00 UAH</p>
           <div className="flex gap-1.5">
-            <button
-              className="
-                    bg-white/5 h-[26px]
-                    border-t border-white/5
-                    text-[#7B7B7B] text-[14px] font-normal leading-[150%]
-                    px-1.5 rounded-md
-                    shadow-[0px_1px_1px_0px_rgba(0,14,15,0.3),0px_4px_6px_0px_rgba(0,14,15,0.15)]
-                  "
-            >
-              Monobank
-            </button>
-            <button
-              className="
-                    bg-white/5 h-[26px]
-                    border-t border-white/5
-                    text-[#7B7B7B] text-[14px] font-normal leading-[150%]
-                    px-1.5 rounded-md
-                    shadow-[0px_1px_1px_0px_rgba(0,14,15,0.3),0px_4px_6px_0px_rgba(0,14,15,0.15)]
-                  "
-            >
-              A-bank
-            </button>
-            <button
-              className="
-                    bg-white/5 h-[26px]
-                    border-t border-white/5
-                    text-[#7B7B7B] text-[14px] font-normal leading-[150%]
-                    px-1.5 rounded-md
-                    shadow-[0px_1px_1px_0px_rgba(0,14,15,0.3),0px_4px_6px_0px_rgba(0,14,15,0.15)]
-                  "
-            >
-              <img src="/icons/more.svg" alt="more" />
-            </button>
+            <GridButton content="Monobank" variant="outline" />
+            <GridButton content="A-bank" variant="outline" />
+            <GridButton content={<img src="/icons/more.svg" alt="more" />} variant="outline" />
           </div>
-
-          <button
-            className="
-                  bg-[#3DF097] hover:bg-[#2EE68A]
-                  text-[#020313] text-[14px]
-                  h-[38px] px-6 w-fit rounded-[4px]
-                  transition duration-200 ease-in-out
-                  hover:brightness-110 hover:shadow-md cursor-pointer
-                "
-          >
-            Buy USDT
-          </button>
-
+          <SideButton text="Buy USDT" />
         </div>
       ))}
     </div>

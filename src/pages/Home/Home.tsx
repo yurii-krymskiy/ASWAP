@@ -22,7 +22,7 @@ const Home = () => {
             Buy Bitcoin and 70+ cryptos on ASWAP using credit cards, bank transfers, and more.
           </p>
 
-          <CustomButton text="Start Your Free Trial" />
+          <CustomButton text="Let's swap!" height="48" padding="24" />
 
           <PaymentCarousel />
         </div>

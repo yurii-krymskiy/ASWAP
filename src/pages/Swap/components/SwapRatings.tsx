@@ -1,5 +1,6 @@
 import React from "react";
 import AreaChart from "./AreaChart";
+import Stars from "../../../components/ui/Stars";
 
 const SwapRatings = () => {
   return (
@@ -19,10 +20,8 @@ const SwapRatings = () => {
             <p className="text-[16px] text-[#7B7B7B]">
               Rating:
             </p>
-            <div className="flex flex-row items-center gap-0.5">
-              {[...Array(5)].map((_, index) => (
-                <img key={index} src="/icons/star.svg" alt="star" />
-              ))}
+            <div className="flex flex-row items-center gap-1">
+              <Stars />
               <p className="text-[14px] text-[#E5FFF2]">
                 (5.0)
               </p>
@@ -38,11 +37,7 @@ const SwapRatings = () => {
             <div key={index} className="w-full bg-[#181818] p-4 border border-[#181818] rounded-[8px] flex flex-col gap-4">
               <div className="flex justify-between items-center">
                 <p className="text-[#E5FFF2] text-[16px]">AnnTomson</p>
-                <div className="flex flex-row items-center gap-0.5">
-                  {[...Array(5)].map((_, index) => (
-                    <img key={index} src="/icons/star.svg" alt="star" />
-                  ))}
-                </div>
+                <Stars />
               </div>
               <p className="text-[#7B7B7B] p2">“Lorem ipsum dolor sit amet, consectetur adipiscing elit”</p>
             </div>
