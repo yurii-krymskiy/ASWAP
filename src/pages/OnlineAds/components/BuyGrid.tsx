@@ -15,15 +15,14 @@ const BuyGrid = () => {
 
         {[...Array(2)].map((_, index) => (
           <div className="contents" key={index}>
-
             {index === 1 && (<div className="col-span-full h-[1px] w-[100%] bg-[#181818]" />)}
             <div className="flex flex-row gap-3 items-center">
               <img src="/images/Tether(USDT).png" alt="Tether" className="w-[30px] object-contain" />
               <p className="p1 text-[#E5FFF2]">USDT</p>
             </div>
             <p className="text-[16px] text-[#E5FFF2] leading-[150%]">55.55 UAH</p>
-            <div className="flex flex-col">
-              <p className="p1 text-[#E5FFF2]">134.70 USDT</p>
+            <div className="flex flex-col mt-1">
+              <p className="p1 text-[#E5FFF2] mb-1">134.70 USDT</p>
               <p className="text-[#7B7B7B] p2">$5.654 - $2,867</p>
             </div>
             <div className="flex gap-1.5">
