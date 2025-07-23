@@ -7,10 +7,13 @@ import ProgressSteps from "./components/ProgressCard/ProgressSteps";
 import HomeCardGrid from "./components/HomeCardGrid/HomeCardGrid";
 import GlassCardWrapper from "../../components/ui/GlassCardWrapper";
 import FAQ from "../../components/layout/FAQ";
+import LightRay from "../../components/ui/LightRay";
 
 const Home = () => {
   return (
     <main className="w-screen max-w-[1400px] mx-auto px-[40px] mt-[78px]">
+      <LightRay side="left" width={400} />
+      <LightRay side="right" width={200} />
       <section className="flex flex-row w-full justify-between">
         <div className="flex flex-col basis-[50%] justify-center">
           <InfoTitle text="The Privacy Focused P2P Platform" isDot={false} />
@@ -74,7 +77,7 @@ const Home = () => {
                   size="18"
                   text="Privacy Progress"
                 />
-                <p className=".p2 text-[#AEAEB8] mt-3 mb-6">Empowering your digital freedom with private, secure, and transparent technologies</p>
+                <p className="p2 text-[#AEAEB8] mt-3 mb-6">Empowering your digital freedom with private, secure, and transparent technologies</p>
               </div>
               <div className="flex items-center justify-center relative my-8 w-[90%] m-auto">
                 <div className="absolute flex flex-col items-center justify-center z-20 inset-0">
@@ -107,19 +110,19 @@ const Home = () => {
           <GradientTitle text="A Coinjoin is..." size="48" />
           <div className="flex flex-row items-start gap-4">
             <img src="/icons/shield-tick-2.svg" alt="shield-tick-2" />
-            <p className=".p1 text-[#AEAEB8]">
+            <p className="p1 text-[#AEAEB8]">
               A collaborative crypto transaction, In a coinjoin, many different users coordinate the creation of one single transaction with inputs and outputs from different users.
             </p>
           </div>
           <div className="flex flex-row items-start gap-4">
             <img src="/icons/shield-tick-2.svg" alt="shield-tick-2" />
-            <p className=".p1 text-[#AEAEB8]">
+            <p className="p1 text-[#AEAEB8]">
               A coinjoin transaction has many standard outputs of the same amounts, which makes it very hard to track them back to their initial inputs.
             </p>
           </div>
           <div className="flex flex-row items-start gap-4">
             <img src="/icons/shield-tick-2.svg" alt="shield-tick-2" />
-            <p className=".p1 text-[#AEAEB8]">
+            <p className="p1 text-[#AEAEB8]">
               Coinjoins allow users to conceal the history of their coins from the public to make their UTXOs fungible on the public Bitcoin network.
             </p>
           </div>
@@ -131,7 +134,7 @@ const Home = () => {
 
         <div className="basis-[40%] z-10">
           <GradientTitle text="Got Questions? We've Got Answers!" size="48" />
-          <p className=".p1 text-[#AEAEB8] mt-6">
+          <p className="p1 text-[#AEAEB8] mt-6">
             Send, store, and receive BTC, ETH, USDT and more in your free and secure ASWAP P2P Platform.
           </p>
         </div>

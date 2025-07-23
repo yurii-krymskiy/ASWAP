@@ -7,7 +7,6 @@ const FAQ = () => {
     setOpenIndex(prevIndex => (prevIndex === index ? null : index));
   };
 
-
   const faqData = [
     {
       question: "What is Aswap wallet?",
