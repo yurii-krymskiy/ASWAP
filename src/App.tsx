@@ -3,6 +3,7 @@ import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import Home from "./pages/Home/Home";
 import BuyCrypto from "./pages/BuyCrypto/BuyCrypto";
+import Swap from "./pages/Swap/Swap";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/buy" element={<BuyCrypto />} />
+        <Route path="/swap" element={<Swap />} />
       </Routes>
       <Footer />
     </div>
