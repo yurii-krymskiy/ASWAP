@@ -7,6 +7,7 @@ import OnlineAds from "./pages/OnlineAds/OnlineAds";
 import MyAccount from "./pages/MyAccount/MyAccount";
 import SwapChat from "./pages/SwapChat/SwapChat";
 import Swap from "./pages/Swap/Swap";
+import CoinJoin from "./pages/CoinJoin/CoinJoin";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/swap" element={<Swap />} />
         <Route path="/online-ads" element={<OnlineAds />} />
         <Route path="/my-account" element={<MyAccount />} />
+        <Route path="/coin-join" element={<CoinJoin />} />
       </Routes>
       <Footer />
     </div>
