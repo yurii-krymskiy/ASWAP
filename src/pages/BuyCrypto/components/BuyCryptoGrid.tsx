@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React from "react";
 import GridButton from "../../../components/ui/GridButton";
 import SideButton from "../../../components/ui/SideButton";
 

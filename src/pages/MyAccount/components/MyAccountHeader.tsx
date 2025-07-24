@@ -1,4 +1,3 @@
-import React from "react";
 import ToggleSwitch from "../../../components/ui/ToggleSwitch";
 import Stars from "../../../components/ui/Stars";
 

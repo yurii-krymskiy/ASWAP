@@ -1,4 +1,3 @@
-import React from "react";
 import StatsCard from "./StatsCard";
 import { stats } from "../static/stats";
 import Stars from "../../../components/ui/Stars";

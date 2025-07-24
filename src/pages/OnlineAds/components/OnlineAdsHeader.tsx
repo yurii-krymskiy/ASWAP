@@ -1,4 +1,3 @@
-import React from "react";
 import CustomButton from "../../../components/ui/CustomButton";
 import BorderButton from "../../../components/ui/BorderButton";
 

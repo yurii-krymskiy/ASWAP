@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import ProgressLine from "../../../components/ui/ProgressLine";
 import Tabs from "../../../components/ui/Tabs";
 import { reviewTab } from "../static/tabs";

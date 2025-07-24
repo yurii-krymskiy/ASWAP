@@ -1,5 +1,3 @@
-import React from "react";
-
 const Stars = () => {
   return (
     <div className="flex flex-row items-center gap-[1px]">

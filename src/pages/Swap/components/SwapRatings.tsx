@@ -1,4 +1,3 @@
-import React from "react";
 import AreaChart from "./AreaChart";
 import Stars from "../../../components/ui/Stars";
 

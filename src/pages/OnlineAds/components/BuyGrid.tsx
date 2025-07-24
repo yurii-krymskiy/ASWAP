@@ -1,4 +1,3 @@
-import React from "react";
 import SideButton from "../../../components/ui/SideButton";
 import GridButton from "../../../components/ui/GridButton";
 

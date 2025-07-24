@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import StatsCard from "../OnlineAds/components/StatsCard";
 import { stats } from "../OnlineAds/static/stats";
 import Tabs from "../../components/ui/Tabs";

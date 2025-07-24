@@ -1,4 +1,3 @@
-import React from "react";
 import SwapHeader from "./components/SwapHeader";
 import SwapChat from "./components/SwapChat";
 import SwapRatings from "./components/SwapRatings";

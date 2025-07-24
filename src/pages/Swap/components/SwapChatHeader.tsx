@@ -1,4 +1,3 @@
-import React from "react";
 import BorderButton from "../../../components/ui/BorderButton";
 
 const SwapChatHeader = () => {

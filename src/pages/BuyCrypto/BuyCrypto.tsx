@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { useState } from "react";
+import { useState } from "react";
 import ButtonToggle from "../../components/ui/ButtonToggle";
 import CustomDropdown from "../../components/ui/CustomDropdown";
 import BuyCryptoGrid from "./components/BuyCryptoGrid";
@@ -11,6 +11,7 @@ const BuyCrypto = () => {
   const [currency, setCurrency] = useState("UAH");
   const [paymentMethod, setPaymentMethod] = useState("Monobank");
   const [price, setPrice] = useState("Price");
+console.log(selectedCoin);
 
   return (
     <main className="w-screen max-w-[1400px] mx-auto px-[40px] mt-[40px] mb-15">

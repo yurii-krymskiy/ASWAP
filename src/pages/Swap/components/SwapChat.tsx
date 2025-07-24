@@ -1,4 +1,3 @@
-import React from "react";
 import SwapChatHeader from "./SwapChatHeader";
 import SwapChatInput from "./SwapChatInput";
 

@@ -1,5 +1,3 @@
-import React from "react";
-
 const SwapChatInput = () => {
   return (
     <div className="bg-[#0F0F0F] p-4 flex items-center flex-1">

@@ -1,5 +1,3 @@
-import React from "react";
-
 const SwapHeader = () => {
   return (
     <div className="flex flex-row items-center justify-between mb-8">
