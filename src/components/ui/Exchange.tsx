@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import CustomDropdown from "./CustomDropdown";
 
 const Exchange = () => {

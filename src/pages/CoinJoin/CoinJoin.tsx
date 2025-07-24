@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Exchange from "../../components/ui/Exchange";
 import CustomButton from "../../components/ui/CustomButton";
 import CoinJoinGrid from "./components/CoinJoinGrid";
