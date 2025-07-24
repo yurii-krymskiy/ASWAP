@@ -17,7 +17,7 @@ const MyAccount = () => {
         <MyAccountHeader />
         <div className="flex flex-col gap-2 mb-8">
           <div className="flex flex-row gap-2 h-[100px]">
-            <div className="bg-[#1D1D1D] border flex flex-row justify-between border-[#181818] rounded-[8px] w-full p-3 items-start">
+            <div className="bg-[#0F0F0F] border flex flex-row justify-between border-[#181818] rounded-[8px] w-full p-3 items-start">
               <div className="flex flex-col gap-1">
                 <div className="flex flex-row gap-1 items-center">
                   <img src="/icons/coins-swap-01.svg" alt="coins-swap" />
@@ -36,6 +36,7 @@ const MyAccount = () => {
             </div>
             {stats.slice(0, 4).map((item, idx) => (
               <StatsCard
+                bgColor="#0F0F0F"
                 height="100%"
                 key={idx}
                 title={item.title}

@@ -1,15 +1,17 @@
 const StatsCard = ({
   title,
   value,
-  height
+  height,
+  bgColor
 }: {
   title: string;
   value: string;
   height: string
+  bgColor: string
 }) => (
   <div
-    className="bg-[#1D1D1D] border border-[#181818] rounded-[8px] p-3 flex justify-between items-start w-full"
-    style={{ height: height}}
+    className="border border-[#181818] rounded-[8px] p-3 flex justify-between items-start w-full"
+    style={{ height: height, backgroundColor: bgColor }}
   >
     <div className="flex flex-col gap-1">
       <div className="flex items-center gap-1">
