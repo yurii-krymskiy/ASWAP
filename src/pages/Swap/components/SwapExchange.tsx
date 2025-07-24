@@ -2,14 +2,29 @@ import { useState } from "react";
 import ButtonToggle from "../../../components/ui/ButtonToggle";
 import CustomDropdown from "../../../components/ui/CustomDropdown";
 import CustomButton from "../../../components/ui/CustomButton";
+import CustomModalWrapper from "../../../components/ui/CustomModalWrapper";
+import PlaceOrderModal from "./PlaceOrderModal";
 
 const SwapExchange = () => {
   const [selectedCoin, setSelectedCoin] = useState("Swap");
   console.log(selectedCoin);
   const [asstetType, setAsstetType] = useState("USDT");
+  const [open, setOpen] = useState(false);
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
 
   return (
     <div className="flex flex-col justify-between basis-[35%] grow-2 h-[500px] bg-[#0F0F0F] border border-[#181818] p-4 rounded-[12px]">
+      <CustomModalWrapper isOpen={open} onClose={handleClose}>
+        <PlaceOrderModal />
+      </CustomModalWrapper>
+
       <div className="flex flex-row items-center justify-between">
         <ButtonToggle
           options={["Swap", "Limit", "DCA", "VA"]}
@@ -104,6 +119,7 @@ const SwapExchange = () => {
       <CustomButton
         text="Place Limit Offer"
         className="h-[40px] w-full"
+        onClick={handleOpen}
       />
       <div className="flex flex-row items-center justify-center gap-1">
         <img src="/icons/arrow.svg" alt="arrow" />
