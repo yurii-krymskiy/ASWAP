@@ -1,7 +1,7 @@
-import SwapChatHeader from "./SwapChatHeader";
-import SwapChatInput from "./SwapChatInput";
+import SwapChatHeader from "./ChatHeader";
+import SwapChatInput from "./ChatInput";
 
-const SwapChat = () => {
+const Chat = () => {
   return (
     <div className="flex basis-[70%] flex-col">
       <SwapChatHeader />
@@ -44,4 +44,4 @@ const SwapChat = () => {
   );
 };
 
-export default SwapChat;
+export default Chat;

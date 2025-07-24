@@ -18,7 +18,7 @@ const Header = () => {
               </Link>
             </li>
             <li className="cursor-pointer">
-              <Link to="/swap">Swap</Link>
+              <Link to="/swap-chat">Swap</Link>
             </li>
             <li className="cursor-pointer">
               <Link to="/coinjoin">CoinJoin</Link>

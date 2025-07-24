@@ -1,4 +1,4 @@
-const SwapChatInput = () => {
+const ChatInput = () => {
   return (
     <div className="bg-[#0F0F0F] p-4 flex items-center flex-1">
       <div className="relative flex-1">
@@ -20,4 +20,4 @@ const SwapChatInput = () => {
   );
 };
 
-export default SwapChatInput;
+export default ChatInput;

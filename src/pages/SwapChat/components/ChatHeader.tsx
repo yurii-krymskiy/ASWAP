@@ -1,6 +1,6 @@
 import BorderButton from "../../../components/ui/BorderButton";
 
-const SwapChatHeader = () => {
+const ChatHeader = () => {
   return (
     <div className="p-4 border-b border-[#181818] flex flex-row justify-between w-full items-center">
       <div className="flex flex-row gap-3 items-center">
@@ -34,4 +34,4 @@ const SwapChatHeader = () => {
   );
 };
 
-export default SwapChatHeader;
+export default ChatHeader;

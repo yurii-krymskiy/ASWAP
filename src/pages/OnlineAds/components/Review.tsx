@@ -2,7 +2,7 @@ import GridButton from "../../../components/ui/GridButton";
 
 const Review = () => {
   return (
-    <div className="flex flex-col border-b border-[#181818] pb-4">
+    <div className="flex flex-col border-b border-[#181818] py-4">
       <div className="flex flex-row items-center gap-3 mb-4">
         <div
           className="

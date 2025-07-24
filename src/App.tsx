@@ -3,9 +3,9 @@ import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import Home from "./pages/Home/Home";
 import BuyCrypto from "./pages/BuyCrypto/BuyCrypto";
-import Swap from "./pages/Swap/Swap";
 import OnlineAds from "./pages/OnlineAds/OnlineAds";
 import MyAccount from "./pages/MyAccount/MyAccount";
+import SwapChat from "./pages/SwapChat/SwapChat";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/buy" element={<BuyCrypto />} />
-        <Route path="/swap" element={<Swap />} />
+        <Route path="/swap-chat" element={<SwapChat />} />
         <Route path="/online-ads" element={<OnlineAds />} />
         <Route path="/my-account" element={<MyAccount />} />
       </Routes>
