@@ -10,7 +10,6 @@ import MyAccountGrid from "./components/MyAccountGrid";
 const MyAccount = () => {
   const [activeTab, setActiveTab] = useState("Normal");
 
-
   return (
     <main className="w-screen max-w-[1400px] mx-auto px-[40px] mt-[40px] mb-15">
       <section>

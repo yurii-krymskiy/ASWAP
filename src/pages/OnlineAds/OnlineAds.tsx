@@ -10,7 +10,7 @@ import { tabList } from "./static/tabs";
 import Reviews from "./components/Reviews";
 const OnlineAds = () => {
   const [selectedCoin, setSelectedCoin] = useState("Online Ads");
-  const [activeTab, setActiveTab] = useState("Normal");
+  const [activeTab, setActiveTab] = useState("Normal Ads");
 
   const returnContent = () => {
     switch (selectedCoin) {

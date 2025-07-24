@@ -23,9 +23,8 @@ const OnlineAdsHeader = () => {
       <div className="flex flex-row gap-3">
         <CustomButton
           text="Follow"
-          height="34"
           icon="/icons/follow.svg"
-          padding="12"
+          className="h-[34px] px-3"
         />
         <BorderButton
           variant="gray"

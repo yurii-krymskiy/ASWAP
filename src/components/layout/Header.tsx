@@ -18,7 +18,10 @@ const Header = () => {
               </Link>
             </li>
             <li className="cursor-pointer">
-              <Link to="/swap-chat">Swap</Link>
+              <Link to="/swap-chat">Swap Chat</Link>
+            </li>
+            <li className="cursor-pointer">
+              <Link to="/swap">Swap</Link>
             </li>
             <li className="cursor-pointer">
               <Link to="/coinjoin">CoinJoin</Link>
@@ -33,7 +36,7 @@ const Header = () => {
         </nav>
       </div>
 
-      <CustomButton text="Connect Wallet" height="40" />
+      <CustomButton text="Connect Wallet" className="h-[40px]" />
     </header>
   );
 };

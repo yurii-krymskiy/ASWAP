@@ -47,7 +47,7 @@ const FilterPanel = () => {
           <div className="flex flex-row gap-1 items-end">
             <CustomButton
               text="Filter"
-              height="38"
+              className="h-[38px]"
             />
             <BorderButton
               text="Reset"

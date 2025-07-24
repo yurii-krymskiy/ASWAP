@@ -6,6 +6,7 @@ import BuyCrypto from "./pages/BuyCrypto/BuyCrypto";
 import OnlineAds from "./pages/OnlineAds/OnlineAds";
 import MyAccount from "./pages/MyAccount/MyAccount";
 import SwapChat from "./pages/SwapChat/SwapChat";
+import Swap from "./pages/Swap/Swap";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/buy" element={<BuyCrypto />} />
         <Route path="/swap-chat" element={<SwapChat />} />
+        <Route path="/swap" element={<Swap />} />
         <Route path="/online-ads" element={<OnlineAds />} />
         <Route path="/my-account" element={<MyAccount />} />
       </Routes>
