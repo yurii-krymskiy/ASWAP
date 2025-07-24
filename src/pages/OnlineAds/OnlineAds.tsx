@@ -6,10 +6,10 @@ import ButtonToggle from "../../components/ui/ButtonToggle";
 import Tabs from "../../components/ui/Tabs";
 import BuyGrid from "./components/BuyGrid";
 import SellGrid from "./components/SellGrid";
-import { tabList } from "./static/tabLists";
+import { tabList } from "./static/tabs";
 import Reviews from "./components/Reviews";
 const OnlineAds = () => {
-  const [selectedCoin, setSelectedCoin] = useState("Feedbaack (1234)");
+  const [selectedCoin, setSelectedCoin] = useState("Online Ads");
   const [activeTab, setActiveTab] = useState("Normal");
 
   const returnContent = () => {

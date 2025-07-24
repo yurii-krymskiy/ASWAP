@@ -42,6 +42,7 @@ const OnlineAdsStats = () => {
         <div className="flex flex-col gap-2">
           {stats.map((item, idx) => (
             <StatsCard
+              height="70px"
               key={idx}
               title={item.title}
               value={item.value}

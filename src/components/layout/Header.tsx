@@ -26,6 +26,9 @@ const Header = () => {
             <li className="cursor-pointer">
               <Link to="/online-ads">Online ads</Link>
             </li>
+            <li className="cursor-pointer">
+              <Link to="/my-account">My Account</Link>
+            </li>
           </ul>
         </nav>
       </div>

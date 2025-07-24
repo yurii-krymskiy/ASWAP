@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ProgressLine from "../../../components/ui/ProgressLine";
 import Tabs from "../../../components/ui/Tabs";
-import { reviewTab } from "../static/tabLists";
+import { reviewTab } from "../static/tabs";
 import Review from "./Review";
 
 const Reviews = () => {

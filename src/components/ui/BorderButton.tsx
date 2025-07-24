@@ -4,13 +4,14 @@ import clsx from "clsx";
 interface BorderButtonProps {
   variant: "green" | "red" | "gray";
   text: string;
-  icon: string;
+  icon?: string;
+  className?: string
 }
 
-const BorderButton = ({ variant, text, icon }: BorderButtonProps) => {
+const BorderButton = ({ variant, text, icon, className }: BorderButtonProps) => {
   return (
     <button
-      className={clsx(
+      className={clsx(className,
         "bg-transparent border rounded-[4px] h-[34px] flex items-center gap-2 px-3 text-[14px] leading-[120%] cursor-pointer font-medium transition-all duration-300 ease-in-out",
         {
           "border-[#DC3434] text-[#DC3434] hover:bg-[#DC34341A]": variant === "red",

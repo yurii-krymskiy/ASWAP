@@ -4,9 +4,10 @@ type CustomDropdownProps = {
   selectedText: string;
   options: string[];
   setSelectedType: (v: string) => void;
+  height: string
 };
 
-const CustomDropdown: React.FC<CustomDropdownProps> = ({ selectedText, options, setSelectedType }) => {
+const CustomDropdown: React.FC<CustomDropdownProps> = ({ selectedText, options, setSelectedType, height }) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -29,11 +30,11 @@ const CustomDropdown: React.FC<CustomDropdownProps> = ({ selectedText, options, 
   };
 
   return (
-    <div className="relative h-[45px]" ref={dropdownRef}>
+    <div className="relative" style={{ height: height }} ref={dropdownRef}>
       <div
         className="
         bg-[#0F0F0F] border border-[#181818] rounded-[8px]
-          flex flex-row h-full items-center px-[12px] gap-3"
+          flex flex-row h-full items-center px-[12px] justify-between"
         onClick={toggleDropdown}
       >
         <span className="text-[16px] font-normal text-[#AEAEB8]">{selectedText}</span>

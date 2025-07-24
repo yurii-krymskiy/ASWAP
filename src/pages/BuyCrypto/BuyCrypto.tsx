@@ -12,9 +12,8 @@ const BuyCrypto = () => {
   const [paymentMethod, setPaymentMethod] = useState("Monobank");
   const [price, setPrice] = useState("Price");
 
-
   return (
-    <main className="w-screen max-w-[1400px] mx-auto px-[40px] mt-[78px]">
+    <main className="w-screen max-w-[1400px] mx-auto px-[40px] mt-[40px] mb-15">
       <section className="flex flex-col mb-25">
         <p className="text-[24px] text-[#AEAEB8] mb-8">Buy Crypto</p>
 
@@ -38,26 +37,29 @@ const BuyCrypto = () => {
               placeholder="2000"
             />
           </div>
-          <div>
+          <div className="w-[10%]">
             <p className="p2 text-[#7B7B7B] mb-2">Currency</p>
             <CustomDropdown
+              height="45px"
               selectedText={currency}
               options={["0"]}
               setSelectedType={setCurrency}
             />
           </div>
 
-          <div>
+          <div className="w-[12%]">
             <p className="p2 text-[#7B7B7B] mb-2">All ways of payment</p>
             <CustomDropdown
+              height="45px"
               selectedText={paymentMethod}
               options={["0"]}
               setSelectedType={setPaymentMethod}
             />
           </div>
-          <div>
+          <div className="w-[10%]">
             <p className="p2 text-[#7B7B7B] mb-2">Sort by</p>
             <CustomDropdown
+              height="45px"
               selectedText={price}
               options={["0"]}
               setSelectedType={setPrice}
