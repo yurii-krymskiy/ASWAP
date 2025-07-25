@@ -24,9 +24,6 @@ const Header = () => {
               <Link to="/swap">Swap</Link>
             </li>
             <li className="cursor-pointer">
-              <Link to="/coinjoin">CoinJoin</Link>
-            </li>
-            <li className="cursor-pointer">
               <Link to="/online-ads">Online ads</Link>
             </li>
             <li className="cursor-pointer">

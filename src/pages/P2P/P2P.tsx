@@ -1,8 +1,16 @@
+import { useState } from "react";
 import { items } from "./static/tabs";
 import ProgressSteps from "./components/ProgressSteps";
+import ThirdStep from "./components/ThirdStep";
+import FirstStep from "./components/FirstStep";
 import SecondStep from "./components/SecondStep";
 
 const P2P = () => {
+  const [activeStep, setActiveStep] = useState(1);
+
+  // Example: You'd trigger setActiveStep(2) when moving to second step, etc.
+  // For demo, just keep state here.
+
   return (
     <main className="w-screen max-w-[1400px] mx-auto px-[40px] mt-[40px] mb-15 flex items-center flex-col">
       <div className="flex flex-row items-center justify-between mb-6 w-full">
@@ -17,8 +25,11 @@ const P2P = () => {
         </div>
       </div>
 
-      <ProgressSteps />
-      <SecondStep />
+      <ProgressSteps activeStep={activeStep} />
+
+      {activeStep === 1 && <FirstStep onNext={() => setActiveStep(2)} />}
+      {activeStep === 2 && <SecondStep onNext={() => setActiveStep(3)} />}
+      {activeStep === 3 && <ThirdStep />}
     </main>
   );
 };

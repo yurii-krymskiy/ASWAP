@@ -6,7 +6,11 @@ import CustomDropdown from "../../../components/ui/CustomDropdown";
 import ToggleButtons from "./ToggleCheckButtons";
 import CustomButton from "../../../components/ui/CustomButton";
 
-const FirstStep = () => {
+interface FirstStepProps {
+  onNext: () => void;
+}
+
+const FirstStep: React.FC<FirstStepProps> = ({ onNext }) => {
   const [activeTab, setActiveTab] = useState("P2P");
   const [selectedCoin, setSelectedCoin] = useState("I want to buy");
   console.log(selectedCoin);
@@ -56,7 +60,7 @@ const FirstStep = () => {
 
         <div className="flex flex-col mb-4">
           <p className="p2 text-[#7B7B7B] mb-2">Price Type</p>
-          <ToggleButtons />
+          <ToggleButtons options={["fixed", "floating"]} />
         </div>
 
         <div className="flex flex-col mb-8">
@@ -82,6 +86,7 @@ const FirstStep = () => {
         <CustomButton
           text="Place Limit Offer"
           className="h-[40px] w-full"
+          onClick={onNext}
         />
 
         <div className="flex flex-row mt-4 items-center justify-center gap-1">

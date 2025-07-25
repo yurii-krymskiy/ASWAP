@@ -6,7 +6,11 @@ import Tabs from "../../../components/ui/Tabs";
 import BorderButton from "../../../components/ui/BorderButton";
 import CustomButton from "../../../components/ui/CustomButton";
 
-const SecondStep = () => {
+interface FirstStepProps {
+  onNext: () => void;
+}
+
+const SecondStep: React.FC<FirstStepProps> = ({ onNext }) => {
   const [activeTab, setActiveTab] = useState("P2P");
   const [selectedCoin, setSelectedCoin] = useState("I want to buy");
   console.log(selectedCoin);
@@ -102,6 +106,7 @@ const SecondStep = () => {
           <CustomButton
             text="Next"
             className="w-[50%]"
+            onClick={onNext}
           />
         </div>
       </div>

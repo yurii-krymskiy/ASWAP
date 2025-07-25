@@ -1,27 +1,46 @@
-import React from "react";
+import { steps } from "../static/tabs";
 
-const ProgressSteps = () => {
+const getProgressWidth = (step: number) => {
+  if (step === 1) return "0%";
+  if (step === 2) return "50%";
+  if (step === 3) return "100%";
+  return "0%";
+};
+
+const ProgressSteps = ({ activeStep }: { activeStep: number }) => {
   return (
-    <div className="flex flex-row justify-between items-center relative mb-10 w-full">
-      <div className="bg-[#181818] h-[2px] absolute w-full top-[20%]" />
-      <div className="flex flex-col gap-2 z-10">
-        <div className="bg-[linear-gradient(180deg,_#FFFD00_-5.87%,_#999800_105.45%)] w-[24px] h-[24px] flex justify-center items-center rounded-full">
-          <p className="p2 text-[#020313] font-semibold">1</p>
-        </div>
-        <p className="p2 text-[#FFFFFF]">Set Type & Price</p>
-      </div>
-      <div className="flex flex-col gap-2 z-10 items-center">
-        <div className="bg-[#202020] w-[24px] h-[24px] flex justify-center items-center rounded-full">
-          <p className="p2 text-[#C5C30038] font-semibold">2</p>
-        </div>
-        <p className="p2 text-[#7B7B7B]">Set Total Amount & Payment Method</p>
-      </div>
-      <div className="flex flex-col gap-2 z-10 items-end">
-        <div className="bg-[#202020] w-[24px] h-[24px] flex justify-center items-center rounded-full">
-          <p className="p2 text-[#C5C30038] font-semibold">3</p>
-        </div>
-        <p className="p2 text-[#7B7B7B]">Set Remarks & Automatic Response</p>
-      </div>
+    <div className="relative w-full mb-10 h-[80px]">
+      <div className="absolute top-[12px] left-0 w-full h-[2px] bg-[#181818]" />
+
+      <div
+        className="absolute top-[12px] left-0 h-[2px] bg-gradient-to-r from-[#FFFD00] to-[#999800] transition-all duration-300"
+        style={{ width: getProgressWidth(activeStep) }}
+      />
+
+      {/* Render Steps */}
+      {steps.map(({ id, position, label, labelWidth }) => {
+        const isActive = activeStep >= id;
+        const dotBg = isActive
+          ? "bg-[linear-gradient(180deg,_#FFFD00_-5.87%,_#999800_105.45%)]"
+          : "bg-[#202020]";
+        const textColor = isActive
+          ? "text-[#020313]"
+          : "text-[#C5C30038]";
+
+        return (
+          <div
+            key={id}
+            className={`absolute top-0 flex flex-col ${position} gap-2 z-10`}
+          >
+            <div
+              className={`w-[24px] h-[24px] flex justify-center items-center rounded-full ${dotBg}`}
+            >
+              <p className={`p2 font-semibold ${textColor}`}>{id}</p>
+            </div>
+            <p className={`p2 text-[#7B7B7B] ${labelWidth}`}>{label}</p>
+          </div>
+        );
+      })}
     </div>
   );
 };
