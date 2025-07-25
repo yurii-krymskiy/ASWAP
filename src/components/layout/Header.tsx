@@ -35,6 +35,9 @@ const Header = () => {
             <li className="cursor-pointer">
               <Link to="/coin-join">Coin join</Link>
             </li>
+            <li className="cursor-pointer">
+              <Link to="/p2p">P2P</Link>
+            </li>
           </ul>
         </nav>
       </div>

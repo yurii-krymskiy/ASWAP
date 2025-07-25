@@ -38,10 +38,12 @@ const CustomDropdown: React.FC<CustomDropdownProps> = ({ selectedText, options, 
         className={clsx("bg-[#0F0F0F] border border-[#181818] rounded-[8px] flex flex-row h-full items-center px-[12px] justify-between text-[#AEAEB8]", className)}
         onClick={toggleDropdown}
       >
-        {icon && (
-          <img src={icon} alt="icon" className="w-[26px] object-contain" />
-        )}
-        <span className="text-[16px] font-normal">{selectedText}</span>
+        <div className="flex flex-row items-center gap-2">
+          {icon && (
+            <img src={icon} alt="icon" className="w-[26px] object-contain" />
+          )}
+          <span className="text-[16px] font-normal">{selectedText}</span>
+        </div>
         <img src="/icons/arrow-white.svg" alt="arrow" width={12} height={12} className="cursor-pointer" />
       </div>
 

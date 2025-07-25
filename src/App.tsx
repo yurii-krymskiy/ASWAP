@@ -8,6 +8,7 @@ import MyAccount from "./pages/MyAccount/MyAccount";
 import SwapChat from "./pages/SwapChat/SwapChat";
 import Swap from "./pages/Swap/Swap";
 import CoinJoin from "./pages/CoinJoin/CoinJoin";
+import P2P from "./pages/P2P/P2P";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/online-ads" element={<OnlineAds />} />
         <Route path="/my-account" element={<MyAccount />} />
         <Route path="/coin-join" element={<CoinJoin />} />
+        <Route path="/p2p" element={<P2P />} />
       </Routes>
       <Footer />
     </div>
