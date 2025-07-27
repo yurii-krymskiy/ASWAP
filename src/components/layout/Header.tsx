@@ -14,7 +14,6 @@ const Header = () => {
             <li className="flex flex-row gap-2 items-center cursor-pointer">
               <Link to="/buy" className="flex items-center gap-2">
                 Buy Crypto
-                <img src="/icons/arrow.svg" alt="arrow" />
               </Link>
             </li>
             <li className="cursor-pointer">

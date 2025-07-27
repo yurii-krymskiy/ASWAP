@@ -49,7 +49,7 @@ const ThirdStep = () => {
           <CustomDropdown
             height="45px"
             selectedText={regions}
-            options={["0"]}
+            options={["Ukraine", "USA", "Europe"]}
             setSelectedType={setRegions}
             className="w-full bg-[#1D1D1D] border-[#181818] text-[#7B7B7B]"
           />

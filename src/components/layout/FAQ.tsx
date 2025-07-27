@@ -11,27 +11,27 @@ const FAQ = () => {
     {
       question: "What is Aswap wallet?",
       answer:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eaque nobis, fugit odit omnis fugiat deleniti animi ab maxime.",
+        "Aswap Wallet is a non-custodial wallet that enables secure and private access to decentralized P2P trading.",
     },
     {
       question: "How do I connect my wallet to the platform?",
       answer:
-        "It depends on your insurance provider and coverage. Please consult with them directly to confirm details.",
+        "Click the “Connect Wallet” button and choose your preferred Web3 wallet, such as MetaMask or WalletConnect.",
     },
     {
       question: "Is Aswap Wallet safe to use?",
       answer:
-        "No referral is required for most services. You can book an appointment directly through our platform.",
+        "Yes, Aswap Wallet uses industry-standard encryption and never stores your private keys or funds. You remain in full control.",
     },
     {
       question: "What can I trade on the platform?",
       answer:
-        "We’re open from 8:00 AM to 6:00 PM, Monday to Friday. Weekend appointments are available by request.",
+        "You can trade cryptocurrencies directly with other users in a decentralized, peer-to-peer environment—no middlemen involved.",
     },
     {
       question: "Are there any fees for using Aswap Wallet?",
       answer:
-        "You’ll meet with a professional who will assess your needs and suggest a treatment plan tailored to you.",
+        "Aswap charges minimal protocol fees, and you only pay gas fees required by the blockchain. No hidden costs.",
     },
   ];
 

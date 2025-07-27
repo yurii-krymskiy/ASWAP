@@ -4,7 +4,7 @@ import SideButton from "../../../components/ui/SideButton";
 
 const BuyCryptoGrid = () => {
   return (
-    <div className="bg-[#0F0F0F] border border-[#181818] grid grid-cols-[repeat(6,auto)] p-6 justify-items-start gap-y-2 items-center">
+    <div className="bg-[#0F0F0F] border border-[#181818] grid grid-cols-[repeat(6,auto)] p-6 justify-items-start gap-y-2 items-center rounded-[12px]">
       <p className="p2 text-[#7B7B7B] mb-1">Trader</p>
       <p className="p2 text-[#7B7B7B] mb-1">Price</p>
       <p className="p2 text-[#7B7B7B] mb-1">Available</p>

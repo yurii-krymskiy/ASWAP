@@ -38,7 +38,7 @@ console.log(selectedCoin);
               placeholder="2000"
             />
           </div>
-          <div className="w-[10%]">
+          <div className="w-[119px]">
             <p className="p2 text-[#7B7B7B] mb-2">Currency</p>
             <CustomDropdown
               height="45px"
@@ -48,7 +48,7 @@ console.log(selectedCoin);
             />
           </div>
 
-          <div className="w-[12%]">
+          <div className="w-[145px]">
             <p className="p2 text-[#7B7B7B] mb-2">All ways of payment</p>
             <CustomDropdown
               height="45px"
@@ -57,7 +57,7 @@ console.log(selectedCoin);
               setSelectedType={setPaymentMethod}
             />
           </div>
-          <div className="w-[10%]">
+          <div className="w-[119px]">
             <p className="p2 text-[#7B7B7B] mb-2">Sort by</p>
             <CustomDropdown
               height="45px"

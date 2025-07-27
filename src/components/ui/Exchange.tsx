@@ -1,21 +1,17 @@
-import { useState } from "react";
-import CustomDropdown from "./CustomDropdown";
-
-const Exchange = () => {
-  const [asstetType, setAsstetType] = useState("USDT");
+const Exchange = ({ handleOpen = () => { } }: { handleOpen?: () => void; }) => {
 
   return (
     <div className="flex flex-col gap-2 relative">
       <div className="bg-[#1D1D1D] p-4 flex justify-between items-center rounded-[8px]">
         <div className="flex flex-col gap-1 w-[144px]">
           <p className="p2 text-[#7B7B7B]">Selling</p>
-          <CustomDropdown
-            height="42px"
-            selectedText={asstetType}
-            options={["0"]}
-            setSelectedType={setAsstetType}
-            icon="/images/Tether(USDT).png"
-          />
+          <div className="flex flex-row items-center bg-[#0F0F0F] rounded-[8px] h-[42px] px-2 justify-between" onClick={handleOpen}>
+            <div className="flex flex-row items-center gap-2">
+              <img src="/images/Tether(USDT).png" alt="USDT" className="w-[26px] h-[26px] object-contain" />
+              <p className="p1 text-[#E5FFF2]">USDT</p>
+            </div>
+            <img src="/icons/arrow.svg" alt="arrow" />
+          </div>
         </div>
 
         <div className="flex flex-col gap-1 items-end w-fit">
@@ -38,14 +34,14 @@ const Exchange = () => {
       </div>
       <div className="bg-[#1D1D1D] p-4 flex justify-between items-center rounded-[8px]">
         <div className="flex flex-col gap-1 w-[144px]">
-          <p className="p2 text-[#7B7B7B]">Selling</p>
-          <CustomDropdown
-            height="42px"
-            selectedText={asstetType}
-            options={["0"]}
-            setSelectedType={setAsstetType}
-            icon="/images/Tether(USDT).png"
-          />
+          <p className="p2 text-[#7B7B7B]">Buying</p>
+          <div className="flex flex-row items-center bg-[#0F0F0F] rounded-[8px] h-[42px] px-2 justify-between" onClick={handleOpen}>
+            <div className="flex flex-row items-center gap-2">
+              <img src="/images/Tether(USDT).png" alt="USDT" className="w-[26px] h-[26px] object-contain" />
+              <p className="p1 text-[#E5FFF2]">USDT</p>
+            </div>
+            <img src="/icons/arrow.svg" alt="arrow" />
+          </div>
         </div>
 
         <div className="flex flex-col gap-1 items-end w-fit">

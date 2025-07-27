@@ -91,7 +91,7 @@ const SecondStep: React.FC<FirstStepProps> = ({ onNext }) => {
           <CustomDropdown
             height="45px"
             selectedText={asstetType}
-            options={["0"]}
+            options={["30", "60", "90"]}
             setSelectedType={setAsstetType}
             className="w-full bg-[#1D1D1D] border-[#181818] text-[#E5FFF2]"
           />

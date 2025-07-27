@@ -58,7 +58,7 @@ const ExchangeBlock = () => {
         </label>
 
         <label>
-          <p className="text-[#979797] text-[12px] mb-[16px] uppercase">The amount to be paid</p>
+          <p className="text-[#979797] text-[12px] mb-[16px] uppercase">quantity purchased</p>
           <div className="relative mb-[24px]">
             <input
               type="text"
@@ -91,9 +91,15 @@ const ExchangeBlock = () => {
           <p className="text-[#C6C6C6] text[16px]">1 ETH ~ 1,55 USD</p>
         </div>
 
-        <button className="bg-[#3DF09754] text-[#C6C6C6] text-[16px] font-semibold h-[48px] w-full rounded-[8px] mb-[16px]">
-          Buy USDT
-        </button>
+        {side === "Buy" ? (
+          <button className="bg-[#3DF09754] text-[#C6C6C6] text-[16px] font-semibold h-[48px] w-full rounded-[8px] mb-[16px]">
+            Buy USDT
+          </button>
+        ) : (
+          <button className="bg-[#FF494954] text-[#C6C6C6] text-[16px] font-semibold h-[48px] w-full rounded-[8px] mb-[16px]">
+            Sell USDT
+          </button>
+        )}
 
         <div className="flex flex-row items-center justify-center text-[#C6C6C699] gap-2">
           <img className="cursor-pointer" src="/icons/refresh.svg" alt="refresh" />

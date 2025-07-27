@@ -24,7 +24,7 @@ const OnlineAdsHeader = () => {
         <CustomButton
           text="Follow"
           icon="/icons/follow.svg"
-          className="h-[34px] px-3"
+          className="h-[34px] px-3 flex items-center justify-center"
         />
         <BorderButton
           variant="gray"

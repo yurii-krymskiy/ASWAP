@@ -16,6 +16,7 @@ const FirstStep: React.FC<FirstStepProps> = ({ onNext }) => {
   console.log(selectedCoin);
   const [asstetType, setAsstetType] = useState("USDT");
   const [fiat, setFiat] = useState("UAH");
+  const [priceType, setPriceType] = useState("fixed");
 
   return (
     <div className="flex flex-col bg-[#0F0F0F] border border-[#181818] rounded-[12px] w-[600px]">
@@ -60,19 +61,38 @@ const FirstStep: React.FC<FirstStepProps> = ({ onNext }) => {
 
         <div className="flex flex-col mb-4">
           <p className="p2 text-[#7B7B7B] mb-2">Price Type</p>
-          <ToggleButtons options={["fixed", "floating"]} />
+          <ToggleButtons
+            options={["fixed", "floating"]}
+            initialActive={priceType}
+            onChange={setPriceType}
+          />
         </div>
-
-        <div className="flex flex-col mb-8">
-          <p className="p2 text-[#7B7B7B] mb-2">Fixed</p>
-          <div className="flex flex-row bg-[#1D1D1D] border border-[#181818] h-[48px] rounded-[8px] px-4 justify-between items-center mb-2">
-            <img src="/icons/minus.svg" alt="minus" className="" />
-            <p className="p1 text-[#E5FFF2]">55.44</p>
-            <img src="/icons/plus.svg" alt="plus" className="" />
+        {priceType === "fixed" ? (
+          <div className="flex flex-col mb-8">
+            <p className="p2 text-[#7B7B7B] mb-2">Fixed</p>
+            <div className="flex flex-row bg-[#1D1D1D] border border-[#181818] h-[48px] rounded-[8px] px-4 justify-between items-center mb-2">
+              <img src="/icons/minus.svg" alt="minus" className="" />
+              <p className="p1 text-[#E5FFF2]">55.44</p>
+              <img src="/icons/plus.svg" alt="plus" className="" />
+            </div>
+            <p className="p3 text-[#7B7B7B]">The fixed price should be between 33.44 - 55.33</p>
           </div>
-          <p className="p3 text-[#7B7B7B]">The fixed price should be between 33.44 - 55.33</p>
-        </div>
-
+        ) : (
+          <div className="flex flex-col mb-8">
+            <p className="p2 text-[#7B7B7B] mb-2">Floating</p>
+            <div className="flex flex-row bg-[#1D1D1D] border border-[#181818] h-[48px] rounded-[8px] px-4 justify-between items-center mb-2">
+              <img src="/icons/minus.svg" alt="minus" className="" />
+              <p className="p1 text-[#E5FFF2]">55.44</p>
+              <img src="/icons/plus.svg" alt="plus" className="" />
+            </div>
+            <div className="flex flex-row bg-[#1D1D1D] border border-[#181818] h-[48px] rounded-[8px] px-4 justify-between items-center mb-2">
+              <img src="/icons/minus.svg" alt="minus" className="" />
+              <p className="p1 text-[#E5FFF2]">55.44</p>
+              <img src="/icons/plus.svg" alt="plus" className="" />
+            </div>
+            <p className="p3 text-[#7B7B7B]">The fixed price should be between 33.44 - 55.33</p>
+          </div>
+        )}
         <div className="flex flex-row justify-between items-center py-8 border-t border-[#181818]">
           <div className="flex flex-col gap-1">
             <p className="p2 text-[#7B7B7B]">Your Price</p>

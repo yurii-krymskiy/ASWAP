@@ -51,7 +51,7 @@ const Home = () => {
           <img src="/bg/orbit.svg" alt="orbit" className="object-contain w-full" />
         </div>
         <div className="bg-[url('/bg/dark-circle.png')] bg-no-repeat bg-cover h-[450px] flex flex-col justify-end items-center relative">
-          <GradientTitle text="Why Aswap Wallet?" size="48" />
+          <GradientTitle text="Why Aswap Platform?" size="48" />
           <p className="text-[16px] text-[#AEAEB8] mt-[24px]">Your secure gateway to fast, private, and fully decentralized P2P Platform.</p>
           <img src="/bg/stars.png" alt="stars" className="w-[40%]" />
 
