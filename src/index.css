@@ -88,6 +88,12 @@
     backdrop-filter: blur(47.15px);
     -webkit-backdrop-filter: blur(47.15px); 
   }
+
+  .mobile-menu-blur {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background-color: rgba(3, 3, 3, 0.4); 
+  }
 }
 
 @media screen and (min-width: 768px) {

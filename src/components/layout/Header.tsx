@@ -61,7 +61,7 @@ const Header = () => {
         </div>
       </div>
       {isMobileMenuOpen && (
-        <div className="absolute top-[77px] left-0 w-full bottom-0 md:hidden backdrop-blur-[20px] backdrop-filter bg-[rgba(3,3,3,0.2)]">
+        <div className="absolute top-[77px] left-0 w-full bottom-0 md:hidden mobile-menu-blur">
           <nav className="bg-[#030303] h-fit p-4">
             <ul className="flex flex-col gap-6 text-[16px] text-[#7B7B7B]">
               {navLinks.map(({ label, path }) => (
