@@ -7,7 +7,7 @@ import LightRay from "../../components/ui/LightRay";
 import ProgressSteps from "./components/ProgressCard/ProgressSteps";
 import HomeCardGrid from "./components/HomeCardGrid/HomeCardGrid";
 import GlassCardWrapper from "../../components/ui/GlassCardWrapper";
-import { coinjoinPoints } from "./static/data";
+import { coinjoinPoints, faqData } from "./static/data";
 import FAQ from "../../components/layout/FAQ";
 
 const Home = () => {
@@ -124,18 +124,18 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="flex flex-col md:flex-row justify-between">
+      <section className="flex flex-col md:flex-row justify-between mb-10">
         <div className="absolute bottom-0 right-0 w-[200px] h-[800px] bg-[url('/bg/dots.right.png')] bg-no-repeat bg-right bg-contain pointer-events-none z-0" />
 
-        <div className="basis-[40%] z-10 mb-8 md:mb-0">
+        <div className="w-[100%] md:w-[40%] z-10 mb-8 md:mb-0">
           <GradientTitle text="Got Questions? We've Got Answers!" classname="text-center md:text-left text-[24px] md:text-[48px]" />
           <p className="text-[14px] md:text-[16px] text-[#AEAEB8] mt-3 md:mt-6 text-center md:text-left">
             Send, store, and receive BTC, ETH, USDT and more in your free and secure ASWAP P2P Platform.
           </p>
         </div>
 
-        <div className="basis-[50%] z-10">
-          <FAQ />
+        <div className="w-[100%] md:w-[50%] z-10">
+          <FAQ faqData={faqData} />
         </div>
       </section>
     </main>

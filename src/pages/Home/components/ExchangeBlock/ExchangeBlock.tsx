@@ -25,9 +25,10 @@ const ExchangeBlock = () => {
         <div className="absolute right-1 top-1/2 -translate-y-1/2 cursor-pointer h-[80%] md:h-[85%]">
           <CurrencyDropdown
             selectedText={selected}
-            options={["0"]}
+            options={[]}
             setSelectedType={setSelected}
             icon={icon}
+            enableDropdown={false}
           />
         </div>
       </div>

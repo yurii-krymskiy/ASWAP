@@ -5,13 +5,22 @@ type CurrencyDropdownProps = {
   options: string[];
   setSelectedType: (v: string) => void;
   icon: string;
+  enableDropdown?: boolean;
 };
 
-const CurrencyDropdown: React.FC<CurrencyDropdownProps> = ({ selectedText, options, setSelectedType, icon }) => {
+const CurrencyDropdown: React.FC<CurrencyDropdownProps> = ({
+  selectedText,
+  options,
+  setSelectedType,
+  icon,
+  enableDropdown = true,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (!enableDropdown) return;
+
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setIsOpen(false);
@@ -20,9 +29,11 @@ const CurrencyDropdown: React.FC<CurrencyDropdownProps> = ({ selectedText, optio
 
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+  }, [enableDropdown]);
 
-  const toggleDropdown = () => setIsOpen(!isOpen);
+  const toggleDropdown = () => {
+    if (enableDropdown) setIsOpen((prev) => !prev);
+  };
 
   const onSelect = (option: string) => {
     setSelectedType(option);
@@ -45,7 +56,7 @@ const CurrencyDropdown: React.FC<CurrencyDropdownProps> = ({ selectedText, optio
         <img src="/icons/arrow-white.svg" alt="arrow" width={12} height={12} className="cursor-pointer" />
       </div>
 
-      {isOpen && (
+      {enableDropdown && isOpen && (
         <div className="absolute mt-1 w-full max-h-60 overflow-auto rounded-lg border border-[rgba(255,255,255,0.07)]  bg-[rgba(255,255,255,0.05)] z-10">
           {options.map((option) => (
             <div
