@@ -54,21 +54,20 @@ const ProgressSteps = () => {
   return (
     <div
       ref={containerRef}
-      className="relative flex flex-col gap-[56px] w-full md:w-[70%] pl-[72px]"
-      style={{ minHeight: "400px" }} // ensure some height so scroll works
+      className="relative flex flex-col gap-4 md:gap-[56px] w-full md:w-[70%] md:pl-[72px]"
     >
       {/* Timeline background line */}
-      <div className="absolute top-0 bottom-0 left-[24px] w-[4px] bg-[#0D0D0D]" />
+      <div className="hidden md:block absolute top-0 bottom-0 left-[24px] w-[4px] bg-[#0D0D0D]" />
 
       {/* Timeline fill line */}
       <div
-        className="absolute left-[24px] w-[4px] bg-[#FFFD00] origin-top shadow-[0_0_12px_4px_rgba(255,253,0,0.5)]"
+        className="hidden md:block absolute left-[24px] w-[4px] bg-[#FFFD00] origin-top shadow-[0_0_12px_4px_rgba(255,253,0,0.5)]"
         style={{ height: fillHeight }}
       />
 
       {steps.map((step, index) => (
         <div key={index} className="relative flex items-start gap-8">
-          <div className="absolute left-[-72px]">
+          <div className="hidden md:block absolute md:left-[-72px]">
             <StepCircle number={step.number} />
           </div>
 

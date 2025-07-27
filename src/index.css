@@ -23,23 +23,20 @@
   }
 
   .p1 {
-    @apply text-[16px] font-normal leading-[150%] tracking-normal;
+    @apply text-[10px] font-normal leading-[150%] tracking-normal;
   }
 
   .p2 {
-    @apply text-[14px] font-normal leading-[150%] tracking-[-0.02em];
+    @apply text-[8.62px] font-normal leading-[150%] tracking-[-0.02em];
   }
 
   .p3 {
-    @apply text-[12px] font-normal leading-[130%] tracking-normal;
+    @apply text-[7px] font-normal leading-[130%] tracking-normal;
   }
 }
 
 @layer components {
   .custom-glass-card {
-    border-radius: 16px; 
-    padding: 12px;
-
     background:
       linear-gradient(120deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.08) 100%) padding-box,
       linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)) border-box;
@@ -79,15 +76,49 @@
 
   .gradientDiv {
     background: 
-      radial-gradient(52.98% 31.66% at 50% 1.71%, #EDEB01 0%, rgba(237, 235, 1, 0) 100%) padding-box,
-      radial-gradient(28.57% 26.19% at 50% 4.61%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%) border-box;
+      radial-gradient(52.98% 10.66% at 50% 1.71%, #EDEB01 0%, rgba(237, 235, 1, 0) 100%) padding-box,
+      radial-gradient(28.57% 10.19% at 50% 4.61%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%) border-box;
     
     border: 1px solid;
     border: 1px solid rgba(26, 26, 26, 0.442);
     border-image-slice: 1;
     border-radius: 22px;
+    background-color: #0D0D0D;
     
     backdrop-filter: blur(47.15px);
     -webkit-backdrop-filter: blur(47.15px); 
+  }
+}
+
+@media screen and (min-width: 768px) {
+  @layer base {
+    .p1 {
+      @apply text-[16px] font-normal leading-[150%] tracking-normal;
+    }
+
+    .p2 {
+      @apply text-[14px] font-normal leading-[150%] tracking-[-0.02em];
+    }
+
+    .p3 {
+      @apply text-[12px] font-normal leading-[130%] tracking-normal;
+    }
+  } 
+
+
+  @layer utilities {
+    .gradientDiv {
+      background: 
+        radial-gradient(52.98% 31.66% at 50% 1.71%, #EDEB01 0%, rgba(237, 235, 1, 0) 100%) padding-box,
+        radial-gradient(28.57% 26.19% at 50% 4.61%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%) border-box;
+      
+      border: 1px solid;
+      border: 1px solid rgba(26, 26, 26, 0.442);
+      border-image-slice: 1;
+      border-radius: 22px;
+      
+      backdrop-filter: blur(47.15px);
+      -webkit-backdrop-filter: blur(47.15px); 
+    }
   }
 }

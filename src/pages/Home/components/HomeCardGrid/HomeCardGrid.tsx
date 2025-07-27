@@ -34,7 +34,7 @@ const cardData = [
 ];
 
 const HomeCardGrid = () => (
-  <div className="bg-[#0D0D0D] w-full h-full rounded-[22px] border border-[#161616] grid grid-cols-3 p-8 gap-6">
+  <div className="md:bg-[#0D0D0D] w-full h-full rounded-[22px] md:border border-[#161616] grid grid-cols-1 md:grid-cols-3 md:p-8 gap-6">
     {cardData.map(({ img, title, text }) => (
       <HomeCard key={title} img={img} title={title} text={text} />
     ))}

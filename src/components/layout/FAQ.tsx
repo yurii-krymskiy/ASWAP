@@ -36,7 +36,7 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="w-full h-[600px] text-[#DFDFDFB2]">
+    <section className="w-full h-[550px] md:h-[600px] text-[#DFDFDFB2]">
       <div className="space-y-6">
         {faqData.map((faq, index) => {
           const isOpen = openIndex === index;
@@ -47,7 +47,7 @@ const FAQ = () => {
                   className="flex items-center justify-between w-full p-[21px] pl-4 gap-2"
                   onClick={() => toggleFAQ(index)}
                 >
-                  <h2 className="text-[18px] text-left font-normal">{faq.question}</h2>
+                  <h2 className="text-[14px] md:text-[18px] text-left font-normal">{faq.question}</h2>
                   <img
                     src={isOpen ? "/icons/close-minus.svg" : "/icons/open-plus.svg"}
                     alt={isOpen ? "Close" : "Open"}
@@ -60,7 +60,7 @@ const FAQ = () => {
                   }`}
               >
                 <div className="rounded-[30px] p-6 pb-0 z-0 relative">
-                  <p className="text-[20px] font-medium">{faq.answer}</p>
+                  <p className="text-[14px] md:text-[18px] font-medium">{faq.answer}</p>
                 </div>
               </div>
             </div>

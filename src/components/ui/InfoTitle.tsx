@@ -3,12 +3,12 @@ const InfoTitle = ({ text, isDot }: { text: string, isDot: boolean }) => {
     <div
       className={`
         flex flex-row items-center gap-1.5
-        px-[14px]
+        px-[12px] md:px-[14px]
         font-medium text-[#AEAEB8]
         bg-[#FFFFFF0D] border border-[#FFFFFF12]
-        backdrop-blur-[20px] rounded-[100px]
+        backdrop-blur-[20px] rounded-[63px] md:rounded-[100px]
         w-fit
-        ${isDot ? "text-[14px] py-[6px]" : "text-[16px] py-[10px] mb-[32px]"}
+        ${isDot ? "text-[10px] md:text-[14px] py-[6px]" : "p1 py-[6px] md:py-[10px] mb-[16px] md:mb-[32px]"}
       `}
     >
       {isDot ? (
@@ -18,7 +18,7 @@ const InfoTitle = ({ text, isDot }: { text: string, isDot: boolean }) => {
         <img
           src="/icons/medal-star.svg"
           alt="medal-star"
-          className="w-[24px] h-[24px]"
+          className="w-[15px] h-[15px] md:w-[24px] md:h-[24px]"
         />
       )}
       {text}
