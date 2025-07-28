@@ -22,14 +22,14 @@ const ChatHeader = () => {
           variant="red"
           text="Cancel Deal"
           icon="/icons/cross-circle.svg"
-          className="h-[25px] md:h-[34px]"
+          className="h-[25px] md:h-[34px] text-[12px] md:text-[14px]"
         />
 
         <BorderButton
           variant="green"
           text="Mark as Paid"
           icon="/icons/check-circle.svg"
-          className="h-[25px] md:h-[34px]"
+          className="h-[25px] md:h-[34px] text-[12px] md:text-[14px]"
         />
       </div>
     </div>

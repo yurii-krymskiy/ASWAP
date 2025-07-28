@@ -81,7 +81,7 @@ const SwapRatings = () => {
                   <p className="text-[#E5FFF2] text-[16px]">AnnTomson</p>
                   <Stars />
                 </div>
-                <p className="text-[#7B7B7B] p2">
+                <p className="text-[#7B7B7B] text-[14px]">
                   “Lorem ipsum dolor sit amet, consectetur adipiscing elit”
                 </p>
               </div>

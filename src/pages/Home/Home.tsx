@@ -15,7 +15,7 @@ const Home = () => {
     <main className="w-screen max-w-[1400px] mx-auto px-[16px] md:px-[40px] mt-[20px] md:mt-[78px]">
       <LightRay side="left" className="w-[200px] left-0 md:w-[400px] md:left-50" />
       <LightRay side="right" className="w-[100px] right-0 md:w-[200px] md:right-75" />
-      <section className="flex gap-8 md:gap-0 flex-col-reverse md:flex-row w-full justify-between">
+      <section className="flex gap-8 md:gap-0 flex-col-reverse md:flex-row w-full justify-between mb-20 md:mb-40">
         <div className="flex flex-col w-[100%] md:w-[50%] justify-center">
           <InfoTitle text="The Privacy Focused P2P Platform" isDot={false} />
           <GradientTitle text="Get Crypto Now, Instant Purchase Available" classname="text-[32px] md:text-[64px]" />
@@ -23,7 +23,7 @@ const Home = () => {
             Buy Bitcoin and 70+ cryptos on ASWAP using credit cards, bank transfers, and more.
           </p>
 
-          <CustomButton text="Let's swap!" className="px-6 h-[48px] w-fit" />
+          <CustomButton text="Let's swap!" className="px-6 h-[48px] w-fit text-[14px] md:text-[16px]" />
 
           <PaymentCarousel />
         </div>
@@ -40,16 +40,16 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="flex flex-col pt-[80px] md:pt-[100px] items-center md:mb-[50px]">
-        <div className="text-center mb-[32px] md:mb-[64px]">
+      <section className="flex flex-col items-center md:mb-[50px]">
+        <div className="text-center mb-[32px] md:mb-[64px] flex flex-col items-center">
           <GradientTitle text="Purchase Crypto in Easy Steps" classname="text-[24px] md:text-[48px]" />
-          <p className="text-[#AEAEB8] text-[14px] md:text-[16px] mt-[12px] md:mt-[24px]">Send, store, and receive BTC, ETH, USDT and more in your free and secure DEX.</p>
+          <p className="text-[#AEAEB8] text-[14px] md:text-[16px] mt-[12px] md:mt-[24px] md:w-[80%]">Send, store, and receive BTC, ETH, USDT and more in your free and secure Paxful cryptocurrency wallet.</p>
         </div>
 
         <ProgressSteps />
       </section>
 
-      <section className="flex flex-col relative overflow-hidden mb-[80px] md:mb-[200px]">
+      <section className="flex flex-col relative overflow-hidden mb-20 md:mb-50">
         <div className="hidden md:block absolute rotate-counter w-full top-[50px]">
           <img src="/bg/orbit.svg" alt="orbit" className="object-contain w-full" />
         </div>
@@ -57,7 +57,7 @@ const Home = () => {
         <div className="md:bg-[url('/bg/dark-circle.png')] bg-no-repeat bg-cover bg-top h-[250px] md:h-[450px] flex flex-col justify-end items-center relative pb-10 md:p-0">
           <div className="md:hidden absolute bg-[url('/bg/dark-circle.png')] w-[200%] h-[250px] top-0 bg-cover bg-no-repeat z-[-1]" />
           <GradientTitle text="Why Aswap Platform?" classname="text-[24px] md:text-[48px]" />
-          <p className="text-[14px] md:text-[16px] text-[#AEAEB8] mt-3 md:mt-[24px] text-center">Send, store, and receive BTC, ETH, USDT and more in your free and secure Paxful cryptocurrency wallet.</p>
+          <p className="text-[14px] md:text-[16px] text-[#AEAEB8] mt-3 md:mt-[24px] text-center md:w-[50%]">Send, store, and receive BTC, ETH, USDT and more in your free and secure Paxful cryptocurrency wallet.</p>
           <img src="/bg/stars.png" alt="stars" className="w-[80%] absolute bottom-0 md:static md:w-[40%]" />
 
           <div
@@ -73,7 +73,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="flex flex-col md:flex-row mb-[80px] md:mb-[100px]">
+      <section className="flex flex-col md:flex-row mb-20 md:mb-25">
         <div className="basis-[50%] flex justify-center mb-8 md:mb-0">
           <GlassCardWrapper>
             <div className="bg-[url('/bg/dots-top.png'),url('/bg/dots-bottom.png')] bg-no-repeat bg-[length:100%] bg-[position:top,left_bottom] p-[12px] md:p-[24px]">

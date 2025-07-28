@@ -15,7 +15,7 @@ const BuyCrypto = () => {
 
 
   return (
-    <main className="w-screen max-w-[1400px] mx-auto px-[16px] md:px-[40px] mt-[20px] md:mt-[78px]">
+    <main className="w-screen max-w-[1400px] mx-auto px-[16px] md:px-[40px] mt-[20px] md:mt-[40px]">
       <CustomModalWrapper isOpen={open} onClose={handleClose}>
         <FilterPanel />
       </CustomModalWrapper>
@@ -33,7 +33,7 @@ const BuyCrypto = () => {
 
       <section className="flex flex-col items-center mb-10 md:mb-20">
         <p className="text-[18px] md:text-[32px] text-[#E5FFF2] leading-[118%] mb-6">Deposit Local Fiat Currencies to Buy Crypto</p>
-        <p className="text-[14px] md:text-[16px] text-center text-[#7B7B7B] mb-11">Convert cash into crypto. Deposit over 65+ fiat currencies to get started with crypto trading.</p>
+        <p className="text-[14px] md:text-[16px] text-center text-[#7B7B7B] mb-6 md:mb-11">Convert cash into crypto. Deposit over 65+ fiat currencies to get started with crypto trading.</p>
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-3 md:gap-4">
           {cryptoCards.map((card, idx) => (

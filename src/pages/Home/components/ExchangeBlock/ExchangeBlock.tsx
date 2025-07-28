@@ -44,7 +44,7 @@ const ExchangeBlock = () => {
             const isBuy = button === "Buy";
             const activeStyles = isActive
               ? `${isBuy ? "text-[#3DF097] bg-[#3DF0971C]" : "text-[#FF4D4D] bg-[#FF4D4D1C]"}
-                 border-t border-white/5 rounded-[5px] md:rounded-[8px]
+                 border-t border-white/5 rounded-[5px] md:rounded-[12px]
                  shadow-[0_1px_1px_0_rgba(0,14,15,0.3),_0_4px_6px_0_rgba(0,14,15,0.15)]`
               : "text-[#AEAEB8] bg-transparent border-t border-transparent";
 
@@ -52,7 +52,7 @@ const ExchangeBlock = () => {
               <button
                 key={button}
                 onClick={() => setSide(button)}
-                className={`w-1/2 h-[25px] md:h-[43px] text-[10px] md:text-[18px] font-normal transition-all duration-200 ${activeStyles}`}
+                className={`w-1/2 h-[25px] md:h-[43px] text-[11px] md:text-[18px] font-normal transition-all duration-200 ${activeStyles}`}
               >
                 {button}
               </button>
@@ -68,13 +68,13 @@ const ExchangeBlock = () => {
           <p className="text-[8px] md:text-[12px] text-[#979797] uppercase mb-2 md:mb-4">PAY WITH</p>
           <div className="flex items-center gap-2 md:gap-4 w-full h-[35px] md:h-[59px] border border-[#FFFFFF12] rounded-[7px] md:rounded-[12px] px-[14px] md:px-6 text-[#C6C6C6]">
             <img src="/icons/mastercard.svg" alt="mastercard" className="h-[13px] md:h-[22px]" />
-            <p className="text-[9px] md:text-[16px]">MasterCard</p>
+            <p className="text-[10px] md:text-[16px]">MasterCard</p>
           </div>
         </div>
 
         <div className="flex justify-between items-center w-full mb-3.5 md:mb-6">
           <p className="text-[8px] md:text-[12px] text-[#979797] uppercase">Reference price</p>
-          <p className="text-[9px] md:text-[16px] text-[#C6C6C6]">1 ETH ~ 1.55 USD</p>
+          <p className="text-[10px] md:text-[16px] text-[#C6C6C6]">1 ETH ~ 1.55 USD</p>
         </div>
 
         <button
@@ -85,7 +85,7 @@ const ExchangeBlock = () => {
           {side} USDT
         </button>
 
-        <div className="flex items-center justify-center text-[#C6C6C699] gap-2 text-[9px] md:text-[16px]">
+        <div className="flex items-center justify-center text-[#C6C6C699] gap-2 text-[10px] md:text-[16px]">
           <img className="cursor-pointer h-[13px] md:h-[22px]" src="/icons/refresh.svg" alt="refresh" />
           <p>Regular investment</p>
           <img className="cursor-pointer" src="/icons/arrow-narrow-right.svg" alt="arrow" />

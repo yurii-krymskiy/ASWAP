@@ -52,7 +52,7 @@ const CurrencyDropdown: React.FC<CurrencyDropdownProps> = ({
         onClick={toggleDropdown}
       >
         <img src={icon} alt="eth" className="cursor-pointer w-[19px] h-[19px] md:w-[33px] md:h-[33px]" />
-        <span className="text-[10px] md:text-[17px] font-normal text-[#D1D1D1]">{selectedText}</span>
+        <span className="text-[10px] md:text-[18px] font-normal text-[#D1D1D1]">{selectedText}</span>
         <img src="/icons/arrow-white.svg" alt="arrow" width={12} height={12} className="cursor-pointer" />
       </div>
 
