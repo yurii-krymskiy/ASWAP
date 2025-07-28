@@ -20,35 +20,16 @@ const OnlineAdsStats = () => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-2">
-        <div className="bg-[#1D1D1D] border flex flex-row justify-between border-[#181818] rounded-[8px] w-full p-3 items-start">
-          <div className="flex flex-col gap-1">
-            <div className="flex flex-row gap-1 items-center">
-              <img src="/icons/coins-swap-01.svg" alt="coins-swap" />
-              <p className="p2 text-[#7B7B7B]">All Trades</p>
-            </div>
-            <p className="p1 text-[#E5FFF2]">
-              4432 Time(s)
-            </p>
-            <div className="text-[#7B7B7B] text-[12px] flex flex-row gap-1">
-              <p className="text-[#3DF097]">Buy 19</p>
-              /
-              <p className="text-[#DC3434]">Sell 3216</p>
-            </div>
-          </div>
-          <img src="/icons/info-circle.svg" alt="info-circle" />
-        </div>
-        <div className="flex flex-col gap-2">
-          {stats.map((item, idx) => (
-            <StatsCard
-              bgColor="#1D1D1D"
-              height="70px"
-              key={idx}
-              title={item.title}
-              value={item.value}
-            />
-          ))}
-        </div>
+      <div className="flex flex-col h-full justify-between">
+        {stats.map((item, idx) => (
+          <StatsCard
+            bgColor="#1D1D1D"
+            key={idx}
+            title={item.title}
+            value={item.value}
+            isAdditional={item.isAdditional}
+          />
+        ))}
       </div>
     </div>
   );
