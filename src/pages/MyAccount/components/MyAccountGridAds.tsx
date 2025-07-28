@@ -40,6 +40,7 @@ const MyAccountGridAds = () => {
 
         {currentOrders.map((_, index) => (
           <div className="contents" key={index}>
+            <div className="md:block hidden col-span-full h-[1px] w-[100%] bg-[#181818]" />
             <div className="flex flex-row justify-between items-center w-full">
               <p className="p2 text-[#7B7B7B] inline md:hidden">Type Ad Number</p>
               <div className="flex flex-col gap-1">
@@ -96,7 +97,7 @@ const MyAccountGridAds = () => {
               </div>
             </div>
             {index < currentOrders.length - 1 && (
-              <div className="md:hidden block col-span-full h-[1px] w-[100%] bg-[#181818]" />
+              <div className="block md:hidden col-span-full h-[1px] w-[100%] bg-[#181818]" />
             )}
           </div>
         ))}

@@ -10,13 +10,13 @@ const FilterPanelOrders = () => {
   const [orderType, setOrderType] = useState("All");
 
   const [selectedCoin, setSelectedCoin] = useState("All");
-console.log(selectedCoin);
+  console.log(selectedCoin);
 
   return (
     <div className="p-4 pt-6 flex flex-col">
       <div className="flex flex-row justify-between items-end flex-wrap gap-y-4">
         <div className="flex flex-col items-end md:flex-row gap-4 flex-wrap w-[300px] md:w-fit bg-[#0F0F0F] md:bg-transparent border border-[#181818] md:border-none p-3 md:p-0 rounded-[12px] md:rounded-[0]">
-          <div className="h-[38px]">
+          <div className="h-[38px] w-full md:w-fit">
             <ButtonToggle
               options={["All", "Completed", "Canceled"]}
               defaultValue="All"

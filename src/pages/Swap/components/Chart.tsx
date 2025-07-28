@@ -3,13 +3,12 @@ import { useEffect, useRef, memo } from "react";
 function Chart() {
   const container = useRef<HTMLDivElement | null>(null);
 
-  useEffect(
-    () => {
-      const script = document.createElement("script");
-      script.src = "https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js";
-      script.type = "text/javascript";
-      script.async = true;
-      script.innerHTML = `
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js";
+    script.type = "text/javascript";
+    script.async = true;
+    script.innerHTML = `
         {
           "allow_symbol_change": true,
           "calendar": false,
@@ -34,29 +33,22 @@ function Chart() {
           "studies": [],
           "autosize": true
         }`;
-      if (container.current)
-        container.current.appendChild(script);
-    },
-    []
-  );
+    if (container.current)
+      container.current.appendChild(script);
+  }, []);
 
   return (
-    <div className="flex basis-[65%] grow-1 rounded-[12px] h-[500px]">
+    <div className="hidden md:flex w-[65%] h-[500px] relative overflow-hidden rounded-[12px]">
       <div
-        className="tradingview-widget-container size-full border border-[#181818] rounded-[12px] overflow-hidden"
+        className="absolute size-full border border-[#181818] z-10 rounded-[12px]"
+        style={{ pointerEvents: "none" }}
+      />
+      <div
         ref={container}
-      >
-        <div
-          className="tradingview-widget-container__widget"
-          style={{
-            height: "calc(100% - 32px)",
-            width: "100%",
-          }}
-        />
-      </div>
+        className="tradingview-widget-container size-full"
+      />
     </div>
   );
-
 }
 
 export default memo(Chart);

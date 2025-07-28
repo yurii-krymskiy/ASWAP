@@ -18,7 +18,7 @@ const PlaceOrderModal = () => {
   ];
 
   return (
-    <div className="h-fit w-[460px] bg-[#0F0F0F] border border-[#181818] rounded-[12px] p-4">
+    <div className="h-fit w-[300px] md:w-[460px] bg-[#0F0F0F] border border-[#181818] rounded-[12px] p-4">
       <div className="flex items-center gap-2 bg-[#1D1D1D] border border-[#181818] h-[45px] w-full rounded-[8px] px-3 mb-2">
         <img src="/icons/search-lg.svg" alt="search" className="w-5 h-5" />
         <input

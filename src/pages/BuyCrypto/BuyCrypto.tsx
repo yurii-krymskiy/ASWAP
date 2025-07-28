@@ -13,7 +13,6 @@ const BuyCrypto = () => {
   const handleClose = () => setOpen(false);
   const handleOpen = () => setOpen(true);
 
-
   return (
     <main className="w-screen max-w-[1400px] mx-auto px-[16px] md:px-[40px] mt-[20px] md:mt-[40px]">
       <CustomModalWrapper isOpen={open} onClose={handleClose}>

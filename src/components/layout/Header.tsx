@@ -37,6 +37,7 @@ const Header = () => {
             src="/logo.svg"
             alt="aswap logo"
             className="w-[106px] h-[29px] md:w-[176px] md:h-[26px] cursor-pointer"
+            onClick={() => setMobileMenuOpen(false)}
           />
         </Link>
 
