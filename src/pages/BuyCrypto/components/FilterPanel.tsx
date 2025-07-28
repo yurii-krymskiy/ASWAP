@@ -13,7 +13,7 @@ const FilterPanel = () => {
     <div className="flex flex-col rounded-[12px] md:rounded-[0] md:flex-row gap-4 mb-6 p-3 md:p-0  w-[300px] md:w-fit bg-[#0F0F0F] md:bg-transparent border border-[#181818] md:border-none">
       <div className="flex flex-col">
         <p className="p2 text-[#7B7B7B] mb-2">Crypto</p>
-        <div className="cursor-pointer h-[45px] w-full md:w-[119px] bg-[#0F0F0F] border border-[#181818] rounded-[8px] text-[#AEAEB8] text-[14px] md:text-[16px] flex items-center justify-between px-3">
+        <div onClick={() => setSelectedCoin("5")} className="cursor-pointer h-[45px] w-full md:w-[119px] bg-[#0F0F0F] border border-[#181818] rounded-[8px] text-[#AEAEB8] text-[14px] md:text-[16px] flex items-center justify-between px-3">
           {selectedCoin}
           <img src="/icons/arrow.svg" alt="arrow" />
         </div>

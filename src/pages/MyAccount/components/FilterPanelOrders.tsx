@@ -10,6 +10,7 @@ const FilterPanelOrders = () => {
   const [orderType, setOrderType] = useState("All");
 
   const [selectedCoin, setSelectedCoin] = useState("All");
+console.log(selectedCoin);
 
   return (
     <div className="p-4 pt-6 flex flex-col">
