@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import CustomButton from "../ui/CustomButton";
 import { useEffect, useState } from "react";
+import useAuth from "../../hooks/useAuth";
 
 const navLinks = [
   { label: "Buy Crypto", path: "/buy" },
@@ -14,6 +15,7 @@ const navLinks = [
 
 const Header = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { connected, walletAddress, connectWallet, disconnectWallet } = useAuth();
 
   useEffect(() => {
     if (isMobileMenuOpen) {
@@ -52,7 +54,11 @@ const Header = () => {
       </div>
 
       <div className="flex flex-row gap-4">
-        <CustomButton text="Connect Wallet" className="h-[36px] md:h-[40px] text-[14px] md:text-[16px]" />
+        <CustomButton
+          text={connected ? `${walletAddress?.slice(0, 4)}...${walletAddress?.slice(-4)}` : "Connect Wallet"}
+          onClick={connected ? disconnectWallet : connectWallet}
+          className="h-[36px] md:h-[40px] text-[14px] md:text-[16px]"
+        />
         <div className="md:hidden cursor-pointer" onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}>
           <img
             src={isMobileMenuOpen ? "/icons/close-menu.svg" : "/icons/burger-menu.svg"}
