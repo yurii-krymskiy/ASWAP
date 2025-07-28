@@ -42,7 +42,7 @@ const CustomDropdown: React.FC<CustomDropdownProps> = ({ selectedText, options, 
           {icon && (
             <img src={icon} alt="icon" className="w-[26px] object-contain" />
           )}
-          <span className="text-[16px] font-normal">{selectedText}</span>
+          <span className="text-[14px] md:text-[16px] font-normal">{selectedText}</span>
         </div>
         <img src="/icons/arrow-white.svg" alt="arrow" width={12} height={12} className="cursor-pointer" />
       </div>
