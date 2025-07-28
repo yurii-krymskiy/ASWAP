@@ -5,20 +5,29 @@ import CoinJoinGrid from "./components/CoinJoinGrid";
 import Tabs from "../../components/ui/Tabs";
 import CoinJoinFilterPanel from "./components/CoinJoinFilterPanel";
 import { coinJoinTabs } from "./static/tabs";
+import CustomModalWrapper from "../../components/ui/CustomModalWrapper";
+import PlaceOrderModal from "../../components/ui/PlaceOrderModal";
 
 const CoinJoin = () => {
-    const [activeTab, setActiveTab] = useState("Crypto");
-  
+  const [activeTab, setActiveTab] = useState("Crypto");
+  const [open, setOpen] = useState(false);
+
+  const handleClose = () => setOpen(false);
+  const handleOpen = () => setOpen(true);
+
   return (
-    <main className="w-screen max-w-[1400px] mx-auto px-[40px] mt-[40px] mb-15 flex items-center flex-col">
-      <section className="flex flex-col w-[600px] mb-6">
-        <p className="mb-6 text-[24px] text-[#7B7B7B] font-medium text-center">CoinJoin</p>
+    <main className="w-screen max-w-[1400px] mx-auto px-[16px] md:px-[40px] mt-[40px] mb-15 flex items-center flex-col">
+      <CustomModalWrapper isOpen={open} onClose={handleClose}>
+        <PlaceOrderModal />
+      </CustomModalWrapper>
+      <section className="flex flex-col w-full md:w-[600px] mb-6">
+        <p className="mb-6 text-[24px] text-[#7B7B7B] font-medium md:text-center">CoinJoin</p>
         <div className="flex flex-row gap-3 items-start bg-[#0F0F0F] border border-[#181818] mb-4 p-4 rounded-[12px]">
           <img src="/icons/alert-triangle.svg" alt="alert-triangle" />
           <p className="p1 text-[#7B7B7B]">Convert cash into crypto. Deposit over 65+ fiat currencies to get started with crypto trading.</p>
         </div>
         <div className="flex flex-col p-4 bg-[#0F0F0F] border border-[#181818] rounded-[12px]">
-          <Exchange />
+          <Exchange handleOpen={handleOpen} />
           <div className="flex flex-row justify-between items-center my-4">
             <p className="p2 text-[#7B7B7B]">Enter the Wallet Address</p>
             <div className="flex flex-row gap-1 cursor-pointer items-center">
@@ -33,7 +42,7 @@ const CoinJoin = () => {
           />
           <CustomButton
             text="Place Limit Offer"
-            className="h-[40px] w-full"
+            className="h-[40px] w-full text-[14px] md:text-[16px]"
           />
           <span className="p3 text-[#7B7B7B] text-center mt-4">By clicking create an exchange, I agree to the <span className="text-[#ACAA00] cursor-pointer">Privacy Policy</span> and <span className="text-[#ACAA00] cursor-pointer">Terms of Service</span></span>
         </div>
@@ -47,7 +56,9 @@ const CoinJoin = () => {
             onChange={setActiveTab}
             className="pt-4"
           />
-          <CoinJoinFilterPanel />
+          <div className="hidden md:block">
+            <CoinJoinFilterPanel />
+          </div>
           <CoinJoinGrid />
         </div>
       </section>

@@ -3,7 +3,7 @@ import ButtonToggle from "../../../components/ui/ButtonToggle";
 import CustomDropdown from "../../../components/ui/CustomDropdown";
 import CustomButton from "../../../components/ui/CustomButton";
 import CustomModalWrapper from "../../../components/ui/CustomModalWrapper";
-import PlaceOrderModal from "./PlaceOrderModal";
+import PlaceOrderModal from "../../../components/ui/PlaceOrderModal";
 import Exchange from "../../../components/ui/Exchange";
 
 const SwapExchange = () => {
