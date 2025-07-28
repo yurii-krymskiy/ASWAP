@@ -3,12 +3,35 @@ import ProgressLine from "../../../components/ui/ProgressLine";
 import Tabs from "../../../components/ui/Tabs";
 import { reviewTab } from "../static/tabs";
 import Review from "./Review";
+import Pagination from "../../../components/ui/CustomPagination";
 
 const Reviews = () => {
   const [activeTab, setActiveTab] = useState("All");
 
+  const ordersPerPage = 8; // 8 rows per page
+  const [currentPage, setCurrentPage] = useState(0);
+
+  const orders = Array.from({ length: 48 }, (_, index) => ({
+    id: index + 1,
+    position: `Position ${index + 1}`,
+    openPrice: (index + 1) * 10,
+    exitPrice: (index + 1) * 15,
+    avgPositionPrice: (index + 1) * 12,
+    realizedPNL: (index % 2 === 0 ? 100 : -50),
+    orderNumber: `ORD-${index + 1}`,
+  }));
+
+  // Pagination logic
+  const totalPages = Math.ceil(orders.length / ordersPerPage);
+  console.log(currentPage);
+
+  const handlePageChange = (selectedPage: { selected: number }) => {
+    setCurrentPage(selectedPage.selected);
+  };
+
+
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col h-full overflow-auto">
       <div className="flex flex-row gap-20 p-4">
         <div className="flex flex-col gap-1">
           <p className="p2 text-[#7B7B7B]">8491 Reviews</p>
@@ -34,12 +57,18 @@ const Reviews = () => {
       </div>
 
       <Tabs tabs={reviewTab} activeKey={activeTab} onChange={setActiveTab} />
-      <div className="flex h-[410px] overflow-auto flex-col p-4 pt-6">
+      <div className="flex h-full overflow-auto flex-col p-4 pt-6">
         <Review />
         <Review />
         <Review />
         <Review />
         <Review />
+      </div>
+      <div className="flex md:hidden justify-center gap-2 h-fit w-full py-2">
+        <Pagination
+          totalPages={totalPages}
+          handlePageChange={handlePageChange}
+        />
       </div>
     </div>
   );

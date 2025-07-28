@@ -1,9 +1,10 @@
 import CustomButton from "../../../components/ui/CustomButton";
 import BorderButton from "../../../components/ui/BorderButton";
+import Feedback from "../../../components/ui/Feedback";
 
 const OnlineAdsHeader = () => {
   return (
-    <div className="flex flex-row justify-between items-center mb-8">
+    <div className="flex flex-col gap-2 md:gap-0 md:flex-row justify-between items-start md:items-center mb-8">
       <div className="flex flex-row gap-4 items-center">
         <div
           className="
@@ -20,21 +21,26 @@ const OnlineAdsHeader = () => {
           <p className="p3 text-[#7B7B7B]">Online | Joined on 2023-04-25 | Deposit 500.00 USDT</p>
         </div>
       </div>
+      <div className="md:hidden">
+        <Feedback />
+      </div>
       <div className="flex flex-row gap-3">
         <CustomButton
           text="Follow"
           icon="/icons/follow.svg"
-          className="h-[34px] px-3 flex items-center justify-center"
+          className="h-[34px] px-3 flex items-center justify-center gap-2 text-[12px] md:text-[14px]"
         />
         <BorderButton
           variant="gray"
           text="Block"
           icon="/icons/cross-gray-circle.svg"
+          className="text-[12px] md:text-[14px]"
         />
         <BorderButton
           variant="gray"
           text="Report"
           icon="/icons/info-octagon.svg"
+          className="text-[12px] md:text-[14px]"
         />
       </div>
     </div>

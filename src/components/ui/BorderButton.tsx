@@ -11,7 +11,7 @@ const BorderButton = ({ variant, text, icon, className }: BorderButtonProps) => 
   return (
     <button
       className={clsx(className,
-        "bg-transparent border rounded-[4px] flex items-center gap-2 px-3 p2 leading-[120%] cursor-pointer font-medium transition-all duration-300 ease-in-out",
+        "bg-transparent border rounded-[4px] flex items-center gap-2 px-3 leading-[120%] cursor-pointer font-medium transition-all duration-300 ease-in-out",
         {
           "border-[#DC3434] text-[#DC3434] hover:bg-[#DC34341A]": variant === "red",
           "border-[#3DF097] text-[#3DF097] hover:bg-[#3DF0971A]": variant === "green",

@@ -4,7 +4,7 @@ import Stars from "../../../components/ui/Stars";
 
 const OnlineAdsStats = () => {
   return (
-    <div className="flex flex-col basis-[25%] border-r border-[#181818] p-4">
+    <div className="hidden md:flex flex-col w-[25%] border-r border-[#181818] p-4">
       <div className="flex flex-col gap-1 mb-6">
         <p className="p2 text-[#7B7B7B]">Positive Feedback</p>
         <div className="flex flex-row items-center">

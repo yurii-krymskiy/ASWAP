@@ -1,5 +1,5 @@
 import ToggleSwitch from "../../../components/ui/ToggleSwitch";
-import Stars from "../../../components/ui/Stars";
+import Feedback from "../../../components/ui/Feedback";
 
 const MyAccountHeader = () => {
   return (
@@ -32,22 +32,7 @@ const MyAccountHeader = () => {
           <ToggleSwitch />
         </div>
       </div>
-      <div className="flex flex-col gap-1 items-start md:items-end">
-        <div className="flex flex-row md:flex-col md:gap-1 items-center gap-2">
-          <p className="p2 text-[#7B7B7B]">Positive Feedback</p>
-          <div className="flex flex-row items-center">
-            <Stars />
-            <p className="p2 text-[#E5FFF2] ml-1">100% (1234)</p>
-          </div>
-        </div>
-        <div className="flex flex-row items-center text-[#7B7B7B] gap-2">
-          <p className="p2 text-[#3DF097]">Positive:</p>
-          <p className="p2 text-[#3DF097]">1000</p>
-          |
-          <p className="p2 text-[#DC3434]">Positive:</p>
-          <p className="p2 text-[#DC3434]">1000</p>
-        </div>
-      </div>
+      <Feedback />
     </div>
   );
 };
