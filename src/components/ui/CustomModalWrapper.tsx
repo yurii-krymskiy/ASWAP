@@ -27,13 +27,7 @@ const CustomModalWrapper = ({ isOpen, onClose, children }: Props) => {
   if (!isOpen) return null;
 
   return (
-    <div
-      className="fixed top-0 left-0 w-full h-full flex items-center justify-center z-20"
-      style={{
-        background: "#0F0F0F38",
-        backdropFilter: "blur(10px)",
-      }}
-    >
+    <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center z-20 mobile-menu-blur">
       <div ref={modalRef}>
         {children}
       </div>

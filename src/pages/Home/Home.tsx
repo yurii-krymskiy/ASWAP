@@ -29,10 +29,12 @@ const Home = () => {
         </div>
 
         <div className="flex flex-col w-[100%] md:w-[50%] items-center justify-center">
-          <div className="
-            bg-[url('/bg/dots.png')] bg-no-repeat bg-contain bg-top 
-            absolute h-[500px] md:h-[800px] w-[100%] md:w-[50%] top-0 z-0
-          "></div>
+          <div
+            className="
+              bg-[url('/bg/dots.png')] bg-no-repeat bg-contain bg-top 
+              absolute h-[500px] md:h-[800px] w-[100%] md:w-[50%] top-0 z-0
+            "
+          />
 
           <ExchangeBlock />
         </div>
@@ -77,10 +79,10 @@ const Home = () => {
             <div className="bg-[url('/bg/dots-top.png'),url('/bg/dots-bottom.png')] bg-no-repeat bg-[length:100%] bg-[position:top,left_bottom] p-[12px] md:p-[24px]">
               <div className="p-[24px, 24px, 0, 24px]">
                 <GradientTitle
-                  classname="text-[11px] md:text-[18px]"
+                  classname="text-[14px] md:text-[18px]"
                   text="Privacy Progress"
                 />
-                <p className="p2 text-[#AEAEB8] mt-3 mb-6">Empowering your digital freedom with private, secure, and transparent technologies</p>
+                <p className="text-[12px] md:text-[16px] text-[#AEAEB8] mt-3 mb-6">Empowering your digital freedom with private, secure, and transparent technologies</p>
               </div>
               <div className="flex items-center justify-center relative my-8 w-[90%] m-auto">
                 <div className="absolute flex flex-col items-center justify-center z-20 inset-0">

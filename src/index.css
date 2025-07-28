@@ -23,15 +23,15 @@
   }
 
   .p1 {
-    @apply text-[10px] font-normal leading-[150%] tracking-normal;
+    @apply text-[14px] font-normal leading-[150%] tracking-normal;
   }
 
   .p2 {
-    @apply text-[8.62px] font-normal leading-[150%] tracking-[-0.02em];
+    @apply text-[12px] font-normal leading-[150%] tracking-[-0.02em];
   }
 
   .p3 {
-    @apply text-[7px] font-normal leading-[130%] tracking-normal;
+    @apply text-[10px] font-normal leading-[130%] tracking-normal;
   }
 }
 

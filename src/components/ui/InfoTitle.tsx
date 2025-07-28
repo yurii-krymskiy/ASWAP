@@ -8,7 +8,7 @@ const InfoTitle = ({ text, isDot }: { text: string, isDot: boolean }) => {
         bg-[#FFFFFF0D] border border-[#FFFFFF12]
         backdrop-blur-[20px] rounded-[63px] md:rounded-[100px]
         w-fit
-        ${isDot ? "text-[10px] md:text-[14px] py-[6px]" : "p1 py-[6px] md:py-[10px] mb-[16px] md:mb-[32px]"}
+        ${isDot ? "text-[10px] md:text-[14px] py-[6px]" : "text-[10px] md:text-[16px] py-[6px] md:py-[10px] mb-[16px] md:mb-[32px]"}
       `}
     >
       {isDot ? (

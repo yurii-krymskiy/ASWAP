@@ -61,7 +61,7 @@ const Header = () => {
         </div>
       </div>
       {isMobileMenuOpen && (
-        <div className="absolute top-[77px] left-0 w-full bottom-0 md:hidden mobile-menu-blur">
+        <div className="absolute top-[77px] left-0 w-full bottom-0 md:hidden mobile-menu-blur" onClick={() => setMobileMenuOpen(false)}>
           <nav className="bg-[#030303] h-fit p-4">
             <ul className="flex flex-col gap-6 text-[16px] text-[#7B7B7B]">
               {navLinks.map(({ label, path }) => (
@@ -75,7 +75,7 @@ const Header = () => {
           </nav>
         </div>
       )}
-    </header>
+    </header >
   );
 };
 

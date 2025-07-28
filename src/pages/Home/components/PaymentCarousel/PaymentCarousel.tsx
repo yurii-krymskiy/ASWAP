@@ -3,7 +3,7 @@ import "./PaymentCarousel.css";
 const PaymentCarousel = () => {
   return (
     <div className="mt-[36px] md:mt-[100px] max-w-[100%]">
-      <p className="text-[#8B8B8B] text-[14px] font-normal mb-[16px]">Accepted payment methods:</p>
+      <p className="text-[#8B8B8B] text-[12px] md:text-[14px] font-normal mb-[16px]">Accepted payment methods:</p>
       <div className="slider-companies">
         <div className="slide-companies-track">
           <div className="slide-companies">
