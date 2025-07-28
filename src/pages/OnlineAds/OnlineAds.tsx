@@ -19,7 +19,7 @@ const OnlineAds = () => {
         return (
           <>
             <Tabs tabs={tabList} activeKey={activeTab} onChange={setActiveTab} className="text-[14px]" />
-            <div className="flex flex-col p-3 md:p-4 h-full justify-between overflow-auto">
+            <div className="flex flex-col p-3 md:p-4 pb-0 h-full justify-between overflow-auto">
               <BuyGrid />
               <SellGrid />
             </div>

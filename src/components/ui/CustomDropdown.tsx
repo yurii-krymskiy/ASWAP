@@ -48,7 +48,7 @@ const CustomDropdown: React.FC<CustomDropdownProps> = ({ selectedText, options, 
       </div>
 
       {isOpen && (
-        <div className={clsx("absolute mt-1 w-full max-h-60 overflow-auto rounded-lg bg-[#0F0F0F] border border-[#181818] z-10", className)}>
+        <div className={clsx("absolute mt-1 w-full max-h-60 overflow-auto rounded-[8px] bg-[#0F0F0F] border border-[#181818] z-10", className)}>
           {options.map((option) => (
             <div
               key={option}

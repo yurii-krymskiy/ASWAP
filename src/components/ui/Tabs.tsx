@@ -2,7 +2,6 @@ import React from "react";
 import clsx from "clsx";
 
 interface TabItem {
-  label: string;
   key: string;
 }
 
@@ -28,7 +27,7 @@ const Tabs: React.FC<TabsProps> = ({ tabs, activeKey, onChange, className }) => 
             }
           )}
         >
-          {tab.label}
+          {tab.key}
         </button>
       ))}
     </div>

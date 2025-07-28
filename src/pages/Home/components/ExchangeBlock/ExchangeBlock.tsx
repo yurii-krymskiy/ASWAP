@@ -1,18 +1,15 @@
 import { useState } from "react";
-import CurrencyDropdown from "../../../../components/ui/CurrencyDropdown";
 import GlassCardWrapper from "../../../../components/ui/GlassCardWrapper";
+import CurrencyButton from "../../../../components/ui/CurrencyButton";
 
 const ExchangeBlock = () => {
   const [side, setSide] = useState<"Sell" | "Buy">("Buy");
-  const [crypto, setCrypto] = useState("ETH");
-  const [currency, setCurrency] = useState("USDT");
 
   const renderInputBlock = (
     label: string,
     placeholder: string,
     selected: string,
     icon: string,
-    setSelected: (val: string) => void
   ) => (
     <label className="block mb-3.5 md:mb-6">
       <p className="text-[8px] md:text-[12px] text-[#979797] uppercase mb-2 md:mb-4">{label}</p>
@@ -23,12 +20,9 @@ const ExchangeBlock = () => {
           className="w-full h-[35px] md:h-[59px] border border-[#FFFFFF12] rounded-[7px] md:rounded-[12px] outline-none text-[#C6C6C6] pl-3.5 md:pl-6 text-[10px] md:text-[16px] bg-transparent"
         />
         <div className="absolute right-1 top-1/2 -translate-y-1/2 cursor-pointer h-[80%] md:h-[85%]">
-          <CurrencyDropdown
+          <CurrencyButton
             selectedText={selected}
-            options={[]}
-            setSelectedType={setSelected}
             icon={icon}
-            enableDropdown={false}
           />
         </div>
       </div>
@@ -60,9 +54,9 @@ const ExchangeBlock = () => {
           })}
         </div>
 
-        {renderInputBlock("The amount to be paid", "The limit is: 10 - 5000", crypto, "/icons/eth.svg", setCrypto)}
+        {renderInputBlock("The amount to be paid", "The limit is: 10 - 5000", "ETH", "/icons/eth.svg")}
 
-        {renderInputBlock("Quantity purchased", "The limit is: 10 - 5000", currency, "/icons/usdt.svg", setCurrency)}
+        {renderInputBlock("Quantity purchased", "The limit is: 10 - 5000", "USDT", "/icons/usdt.svg")}
 
         <div className="mb-3.5 md:mb-6">
           <p className="text-[8px] md:text-[12px] text-[#979797] uppercase mb-2 md:mb-4">PAY WITH</p>

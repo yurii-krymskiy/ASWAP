@@ -3,7 +3,7 @@ import Stars from "./Stars";
 const Feedback = () => {
   return (
     <div className="flex flex-col gap-1 items-start md:items-end">
-      <div className="flex flex-row md:flex-col md:gap-1 items-center gap-2">
+      <div className="flex flex-row md:flex-col md:gap-1 items-end gap-2">
         <p className="text-[14px] text-[#7B7B7B]">Positive Feedback</p>
         <div className="flex flex-row items-center">
           <Stars />

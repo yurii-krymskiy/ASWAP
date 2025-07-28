@@ -1,9 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState } from "react";
 import CustomDropdown from "../../../components/ui/CustomDropdown";
-import ButtonToggle from "../../../components/ui/ButtonToggle";
 
 const FilterPanel = () => {
-  const [selectedCoin, setSelectedCoin] = useState("USDT");
+  const [selectedCoin, setSelectedCoin] = useState("UAH");
   const [currency, setCurrency] = useState("UAH");
   const [paymentMethod, setPaymentMethod] = useState("Monobank");
   const [price, setPrice] = useState("Price");
@@ -11,16 +11,11 @@ const FilterPanel = () => {
 
   return (
     <div className="flex flex-col rounded-[12px] md:rounded-[0] md:flex-row gap-4 mb-6 p-3 md:p-0  w-[300px] md:w-fit bg-[#0F0F0F] md:bg-transparent border border-[#181818] md:border-none">
-      <div className="flex flex-row">
-        <div className="flex flex-col">
-          <p className="p2 text-[#7B7B7B] mb-2">Crypto</p>
-          <div className="h-[45px]">
-            <ButtonToggle
-              options={["USDT", "SOL"]}
-              defaultValue="USDT"
-              onChange={(val) => setSelectedCoin(val)}
-            />
-          </div>
+      <div className="flex flex-col">
+        <p className="p2 text-[#7B7B7B] mb-2">Crypto</p>
+        <div className="cursor-pointer h-[45px] w-full md:w-[119px] bg-[#0F0F0F] border border-[#181818] rounded-[8px] text-[#AEAEB8] text-[14px] md:text-[16px] flex items-center justify-between px-3">
+          {selectedCoin}
+          <img src="/icons/arrow.svg" alt="arrow" />
         </div>
       </div>
 

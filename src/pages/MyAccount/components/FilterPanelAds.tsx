@@ -4,7 +4,7 @@ import DatePicker from "../../../components/ui/DatePicker";
 import CustomButton from "../../../components/ui/CustomButton";
 import BorderButton from "../../../components/ui/BorderButton";
 
-const FilterPanel = () => {
+const FilterPanelAds = () => {
   const [asstetType, setAsstetType] = useState("All");
   const [type, setType] = useState("All");
   const [status, setStatus] = useState("All");
@@ -44,10 +44,10 @@ const FilterPanel = () => {
             <p className="p2 text-[#7B7B7B] mb-2 w-full md:w-[300px]">Date</p>
             <DatePicker />
           </div>
-          <div className="flex flex-row gap-1 items-end">
+          <div className="flex flex-row gap-2 items-end">
             <CustomButton
               text="Filter"
-              className="h-[38px] w-full md:w-fit"
+              className="h-[38px] w-full md:w-fit text-[14px]"
             />
             <BorderButton
               text="Reset"
@@ -65,4 +65,4 @@ const FilterPanel = () => {
   );
 };
 
-export default FilterPanel;
+export default FilterPanelAds;
