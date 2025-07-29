@@ -8,21 +8,22 @@ import CustomButton from "../../../components/ui/CustomButton";
 
 interface FirstStepProps {
   onNext: () => void;
+  onPrev: () => void;
 }
 
-const SecondStep: React.FC<FirstStepProps> = ({ onNext }) => {
+const SecondStep: React.FC<FirstStepProps> = ({ onNext, onPrev }) => {
   const [activeTab, setActiveTab] = useState("P2P");
   const [selectedCoin, setSelectedCoin] = useState("I want to buy");
   console.log(selectedCoin);
   const [asstetType, setAsstetType] = useState("15 min");
 
   return (
-    <div className="flex flex-col bg-[#0F0F0F] border border-[#181818] rounded-[12px] w-[600px]">
+    <div className="flex flex-col bg-[#0F0F0F] border border-[#181818] rounded-[12px] w-full md:w-[600px]">
       <Tabs
         tabs={p2pTabs}
         activeKey={activeTab}
         onChange={setActiveTab}
-        className="pt-4"
+        className="pt-4 justify-start gap-8"
       />
       <div className="p-4">
         <div className="h-[44px] mb-6">
@@ -48,8 +49,8 @@ const SecondStep: React.FC<FirstStepProps> = ({ onNext }) => {
 
         <div className="flex flex-col mb-7 items-start">
           <p className="p2 text-[#7B7B7B] mb-2">Order Limit</p>
-          <div className="flex flex-row justify-between items-center">
-            <div className="flex flex-col relative">
+          <div className="flex flex-col md:flex-row justify-between items-center w-full">
+            <div className="flex flex-col relative w-full">
               <div className="flex items-center justify-between h-[48px] px-4 rounded-[8px] border border-[#181818] bg-[#1D1D1D] mb-1">
                 <input
                   type="text"
@@ -60,8 +61,8 @@ const SecondStep: React.FC<FirstStepProps> = ({ onNext }) => {
               </div>
               <p className="p3 text-[#7B7B7B] absolute bottom-[-15px]">~0,9 UAH</p>
             </div>
-            <img src="/icons/minus.svg" alt="minus" />
-            <div className="flex flex-col relative">
+            <img src="/icons/minus.svg" className="rotate-90 md:rotate-0" alt="minus" />
+            <div className="flex flex-col relative w-full">
               <div className="flex items-center justify-between h-[48px] px-4 rounded-[8px] border border-[#181818] bg-[#1D1D1D] mb-1">
                 <input
                   type="text"
@@ -76,9 +77,9 @@ const SecondStep: React.FC<FirstStepProps> = ({ onNext }) => {
         </div>
 
         <div className="flex flex-col mb-4">
-          <p className="p2 text-[#E5FFF2] mb-1">Payment Method</p>
-          <p className="p3 text-[#7B7B7B] mb-2">Select up to 5 payment method</p>
-          <button className="h-[32px] flex flex-row items-center justify-center gap-2 border border-[#7B7B7B] rounded-[4px] w-[140px] cursor-pointer">
+          <p className="p1 text-[#E5FFF2] mb-1">Payment Method</p>
+          <p className="p2 text-[#7B7B7B] mb-2">Select up to 5 payment method</p>
+          <button className="h-[34px] w-full flex flex-row items-center justify-center gap-2 border border-[#7B7B7B] rounded-[4px] md:w-[140px] cursor-pointer">
             <div className="rounded-full border border-[#7B7B7B] flex items-center justify-center w-[16px] h-[16px]">
               <img src="/icons/plus.svg" alt="plus" />
             </div>
@@ -86,7 +87,7 @@ const SecondStep: React.FC<FirstStepProps> = ({ onNext }) => {
           </button>
         </div>
 
-        <div className="flex flex-col mb-8">
+        <div className="flex flex-col mb-6 md:mb-8">
           <p className="p2 text-[#7B7B7B] mb-2">Price Type</p>
           <CustomDropdown
             height="45px"
@@ -100,12 +101,13 @@ const SecondStep: React.FC<FirstStepProps> = ({ onNext }) => {
         <div className="flex flex-row gap-4">
           <BorderButton
             text="Reset"
-            className="h-[40px] w-[50%] flex items-center justify-center"
+            className="h-[40px] w-[50%] flex items-center justify-center text-[14px] md:text-[16px]"
             variant="gray"
+            onClick={onPrev}
           />
           <CustomButton
             text="Next"
-            className="w-[50%]"
+            className="w-[50%] text-[14px] md:text-[16px]"
             onClick={onNext}
           />
         </div>

@@ -37,7 +37,7 @@ const ProgressSteps = ({ activeStep }: { activeStep: number }) => {
             >
               <p className={`p2 font-semibold ${textColor}`}>{id}</p>
             </div>
-            <p className={`p2 text-[#7B7B7B] ${labelWidth}`}>{label}</p>
+            <p className={`p2 text-[#7B7B7B] ${activeStep === id ? "inline text-[white]" : "hidden"} md:inline ${labelWidth}`}>{label}</p>
           </div>
         );
       })}

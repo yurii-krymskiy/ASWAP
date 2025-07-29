@@ -23,7 +23,7 @@ export default function ToggleButtons({
   }
 
   return (
-    <div className="border border-[#181818] bg-[#0F0F0F] rounded-[8px] p-1 flex">
+    <div className="border border-[#181818] bg-[#0F0F0F] rounded-[8px] text-[14px] md:text-[16px] flex">
       {options.map((option) => (
         <button
           key={option}

@@ -8,19 +8,19 @@ import ToggleButtons from "./ToggleCheckButtons";
 import BorderButton from "../../../components/ui/BorderButton";
 import CustomButton from "../../../components/ui/CustomButton";
 
-const ThirdStep = () => {
+const ThirdStep = ({ onPrev }: { onPrev: () => void }) => {
   const [activeTab, setActiveTab] = useState("P2P");
   const [asstetType, setAsstetType] = useState("Add Tags");
   const [regions, setRegions] = useState("");
   const [active, setActive] = useState(false);
 
   return (
-    <div className="flex flex-col bg-[#0F0F0F] border border-[#181818] rounded-[12px] w-[600px]">
+    <div className="flex flex-col bg-[#0F0F0F] border border-[#181818] rounded-[12px] w-full md:w-[600px]">
       <Tabs
         tabs={p2pTabs}
         activeKey={activeTab}
         onChange={setActiveTab}
-        className="pt-4"
+        className="pt-4 justify-start gap-8"
       />
       <div className="p-4">
         <div className="flex flex-col mb-4">
@@ -87,23 +87,24 @@ const ThirdStep = () => {
           </div>
         </div>
 
-        <div className="flex flex-col mb-8">
+        <div className="flex flex-col mb-4 md:mb-8">
           <p className="p2 text-[#7B7B7B] mb-2">Price Type</p>
           <ToggleButtons options={["Online", "Offline", "Privat"]} />
         </div>
-        <div className="flex flex-row items-center justify-between mb-8">
+        <div className="flex flex-row items-center justify-between mb-6 md:mb-8">
           <p className="p2 text-[#7B7B7B]">Estimated Fee</p>
           <p className="p1 text-[#E5FFF2]">0.003 UAH</p>
         </div>
         <div className="flex flex-row gap-4">
           <BorderButton
             text="Previous"
-            className="h-[40px] w-[50%] flex items-center justify-center"
+            className="h-[40px] w-[50%] flex items-center justify-center text-[14px] md:text-[16px]"
             variant="gray"
+            onClick={onPrev}
           />
           <CustomButton
             text="Post"
-            className="w-[50%]"
+            className="w-[50%] text-[14px] md:text-[16px]"
           />
         </div>
       </div>

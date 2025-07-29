@@ -19,12 +19,12 @@ const FirstStep: React.FC<FirstStepProps> = ({ onNext }) => {
   const [priceType, setPriceType] = useState("fixed");
 
   return (
-    <div className="flex flex-col bg-[#0F0F0F] border border-[#181818] rounded-[12px] w-[600px]">
+    <div className="flex flex-col bg-[#0F0F0F] border border-[#181818] rounded-[12px] w-full md:w-[600px]">
       <Tabs
         tabs={p2pTabs}
         activeKey={activeTab}
         onChange={setActiveTab}
-        className="pt-4"
+        className="pt-4 justify-start gap-8"
       />
       <div className="p-4">
         <div className="h-[44px] mb-6">
@@ -96,16 +96,16 @@ const FirstStep: React.FC<FirstStepProps> = ({ onNext }) => {
         <div className="flex flex-row justify-between items-center py-8 border-t border-[#181818]">
           <div className="flex flex-col gap-1">
             <p className="p2 text-[#7B7B7B]">Your Price</p>
-            <p className="text-[24px] text-[#E5FFF2]">$33.55</p>
+            <p className="text-[18px] md:text-[24px] text-[#E5FFF2]">$33.55</p>
           </div>
           <div className="flex flex-col gap-1 items-end">
             <p className="p2 text-[#7B7B7B]">Highest Order Price</p>
-            <p className="text-[24px] text-[#E5FFF2]">$33.55</p>
+            <p className="text-[18px] md:text-[24px] text-[#E5FFF2]">$33.55</p>
           </div>
         </div>
         <CustomButton
           text="Place Limit Offer"
-          className="h-[40px] w-full"
+          className="h-[40px] w-full text-[14px] md:text-[16px]"
           onClick={onNext}
         />
 

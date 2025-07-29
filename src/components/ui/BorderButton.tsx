@@ -5,11 +5,13 @@ interface BorderButtonProps {
   text: string;
   icon?: string;
   className?: string
+  onClick?: () => void;
 }
 
-const BorderButton = ({ variant, text, icon, className }: BorderButtonProps) => {
+const BorderButton = ({ variant, text, icon, className, onClick }: BorderButtonProps) => {
   return (
     <button
+      onClick={onClick}
       className={clsx(className,
         "bg-transparent border rounded-[4px] flex items-center gap-2 px-3 leading-[120%] cursor-pointer font-medium transition-all duration-300 ease-in-out",
         {
