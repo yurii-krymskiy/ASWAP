@@ -33,6 +33,7 @@ const Home = () => {
         </div>
       </section>
 
+
       <section className="flex flex-col items-center md:mb-[50px]">
         <div className="text-center mb-[32px] md:mb-[64px] flex flex-col items-center">
           <GradientTitle text="Purchase Crypto in Easy Steps" classname="text-[24px] md:text-[48px]" />
