@@ -28,8 +28,10 @@ const Home = () => {
           <PaymentCarousel />
         </div>
 
-        <div className="flex flex-col w-[100%] md:w-[50%] items-center justify-center">
-          <Spline scene="https://prod.spline.design/hir1BGIn0LhHzORe/scene.splinecode" />
+        <div className="flex flex-col w-[100%] md:w-[50%] items-center justify-center absolute right-0">
+          <div className="w-[1200px] h-[100%]">
+            <Spline scene="/robot/scene.splinecode.json" />
+          </div>
         </div>
       </section>
 
