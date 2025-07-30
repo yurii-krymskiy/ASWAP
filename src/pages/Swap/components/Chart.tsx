@@ -38,7 +38,7 @@ function Chart() {
   }, []);
 
   return (
-    <div className="hidden md:flex w-[65%] h-[500px] relative overflow-hidden rounded-[12px]">
+    <div className="hidden md:flex w-[65%] h-[450px] relative overflow-hidden rounded-[12px]">
       <div
         className="absolute size-full border border-[#181818] z-10 rounded-[12px]"
         style={{ pointerEvents: "none" }}

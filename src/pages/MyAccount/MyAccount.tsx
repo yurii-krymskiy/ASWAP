@@ -21,7 +21,7 @@ const MyAccount = () => {
   const handleOpen = (modalType: "Ads" | "Orders") => setOpenModal(modalType);
 
   return (
-    <main className="w-screen max-w-[1400px] mx-auto px-[16px] md:px-[40px] mt-[20px] md:mt-[40px]">
+    <main className="w-screen max-w-[1400px] mx-auto px-[16px] md:px-[40px] mt-6 md:mt-[40px]">
       <CustomModalWrapper isOpen={!!openModal} onClose={handleClose}>
         {openModal === "Ads" && <FilterPanelAds />}
         {openModal === "Orders" && <FilterPanelOrders />}

@@ -24,7 +24,7 @@ const Swap = () => {
         <SwapExchange />
       </section>
       <section>
-        <div className="flex flex-row items-center justify-between mb-[12px] md:mb-8">
+        <div className="flex flex-row items-center justify-between mb-[12px] md:mb-6">
           <p className="text-[18px] md:text-[24px] text-[#AEAEB8]">My Orders</p>
           <FilterButton handleOpen={handleOpen} />
         </div>

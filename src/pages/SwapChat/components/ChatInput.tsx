@@ -1,6 +1,6 @@
 const ChatInput = () => {
   return (
-    <div className="bg-[#0F0F0F] p-4 flex items-center flex-1">
+    <div className="bg-[#0F0F0F] p-4 flex items-center flex-1 rounded-[8px] md:rounded-[12px]">
       <div className="relative flex-1">
         <input
           type="text"

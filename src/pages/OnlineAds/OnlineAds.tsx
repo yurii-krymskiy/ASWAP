@@ -33,7 +33,7 @@ const OnlineAds = () => {
   };
 
   return (
-    <main className="w-screen max-w-[1400px] mx-auto px-[16px] md:px-[40px] mt-[40px] mb-15">
+    <main className="w-screen max-w-[1400px] mx-auto px-[16px] md:px-[40px] mt-6 mb-15">
       <section>
         <OnlineAdsHeader />
         <TradesInfoMobile />

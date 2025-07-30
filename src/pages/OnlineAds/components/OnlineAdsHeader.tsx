@@ -4,7 +4,7 @@ import Feedback from "../../../components/ui/Feedback";
 
 const OnlineAdsHeader = () => {
   return (
-    <div className="flex flex-col gap-2 md:gap-0 md:flex-row justify-between items-start md:items-center mb-8">
+    <div className="flex flex-col gap-2 md:gap-0 md:flex-row justify-between items-start md:items-center mb-4">
       <div className="flex flex-row gap-4 items-center">
         <div
           className="

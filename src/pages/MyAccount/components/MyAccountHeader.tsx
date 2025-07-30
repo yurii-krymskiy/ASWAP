@@ -23,7 +23,7 @@ const MyAccountHeader = () => {
                 <p>Online</p>
                 <ToggleSwitch />
               </div>
-              <p>| Joined on 2023-04-25 | Deposit 500.00 USDT</p>
+              <p><span className="hidden md:inline">|</span> Joined on 2023-04-25 | Deposit 500.00 USDT</p>
             </div>
           </div>
         </div>

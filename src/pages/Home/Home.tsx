@@ -1,7 +1,6 @@
 import InfoTitle from "../../components/ui/InfoTitle";
 import GradientTitle from "../../components/ui/GradientTitle";
 import CustomButton from "../../components/ui/CustomButton";
-import ExchangeBlock from "./components/ExchangeBlock/ExchangeBlock";
 import PaymentCarousel from "./components/PaymentCarousel/PaymentCarousel";
 import LightRay from "../../components/ui/LightRay";
 import ProgressSteps from "./components/ProgressCard/ProgressSteps";
@@ -9,6 +8,7 @@ import HomeCardGrid from "./components/HomeCardGrid/HomeCardGrid";
 import GlassCardWrapper from "../../components/ui/GlassCardWrapper";
 import { coinjoinPoints, faqData } from "./static/data";
 import FAQ from "../../components/layout/FAQ";
+import Spline from "@splinetool/react-spline";
 
 const Home = () => {
   return (
@@ -29,21 +29,13 @@ const Home = () => {
         </div>
 
         <div className="flex flex-col w-[100%] md:w-[50%] items-center justify-center">
-          <div
-            className="
-              bg-[url('/bg/dots.png')] bg-no-repeat bg-contain bg-top 
-              absolute h-[500px] md:h-[800px] w-[100%] md:w-[50%] top-0 z-0
-            "
-          />
-
-          <ExchangeBlock />
+          <Spline scene="https://prod.spline.design/hir1BGIn0LhHzORe/scene.splinecode" />
         </div>
       </section>
 
       <section className="flex flex-col items-center md:mb-[50px]">
         <div className="text-center mb-[32px] md:mb-[64px] flex flex-col items-center">
           <GradientTitle text="Purchase Crypto in Easy Steps" classname="text-[24px] md:text-[48px]" />
-          <p className="text-[#AEAEB8] text-[14px] md:text-[16px] mt-[12px] md:mt-[24px] md:w-[80%]">Send, store, and receive BTC, ETH, USDT and more in your free and secure Paxful cryptocurrency wallet.</p>
         </div>
 
         <ProgressSteps />
@@ -57,7 +49,7 @@ const Home = () => {
         <div className="md:bg-[url('/bg/dark-circle.png')] bg-no-repeat bg-cover bg-top h-[250px] md:h-[450px] flex flex-col justify-end items-center relative pb-10 md:p-0">
           <div className="md:hidden absolute bg-[url('/bg/dark-circle.png')] w-[200%] h-[250px] top-0 bg-cover bg-no-repeat z-[-1]" />
           <GradientTitle text="Why Aswap Platform?" classname="text-[24px] md:text-[48px]" />
-          <p className="text-[14px] md:text-[16px] text-[#AEAEB8] mt-3 md:mt-[24px] text-center md:w-[50%]">Send, store, and receive BTC, ETH, USDT and more in your free and secure Paxful cryptocurrency wallet.</p>
+          <p className="text-[14px] md:text-[16px] text-[#AEAEB8] mt-3 md:mt-[24px] text-center md:w-[40%]">Your secure gateway to fast, private, and fully decentralized P2P Platform.</p>
           <img src="/bg/stars.png" alt="stars" className="w-[80%] absolute bottom-0 md:static md:w-[40%]" />
 
           <div

@@ -1,9 +1,10 @@
 import type { WalletName } from "@solana/wallet-adapter-base";
 import { useWallet } from "@solana/wallet-adapter-react";
-import { useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 const useAuth = () => {
   const { publicKey, connected, connect, disconnect, select, wallet } = useWallet();
+  const [walletAddress, setWalletAddress] = useState<string | null>(null);
 
   const connectWallet = useCallback(async () => {
     try {
@@ -24,13 +25,19 @@ const useAuth = () => {
     }
   }, [disconnect]);
 
+  useEffect(() => {
+    if (publicKey) {
+      setWalletAddress(publicKey?.toBase58());
+    }
+  }, [publicKey]);
+
   return {
     wallet,
     publicKey,
     connected,
     connectWallet,
     disconnectWallet,
-    walletAddress: publicKey?.toBase58() || null,
+    walletAddress
   };
 };
 

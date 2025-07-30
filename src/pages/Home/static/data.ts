@@ -1,12 +1,12 @@
 export const coinjoinPoints = [
-  "A collaborative bitcoin transaction. In a coinjoin, many different users coordinate the creation of one single transaction with inputs and outputs from different users.",
+  "A collaborative crypto transaction. In a coinjoin, many different users coordinate the creation of one single transaction with inputs and outputs from different users.",
   "A coinjoin transaction has many standard outputs of the same amounts, which makes it very hard to track them back to their initial inputs.",
   "Coinjoins allow users to conceal the history of their coins from the public to make their UTXOs fungible on the public Bitcoin network.",
 ];
 
 export const faqData = [
     {
-      question: "What is Aswap wallet?",
+      question: "What is Aswap platform?",
       answer:
         "Aswap Wallet is a non-custodial wallet that enables secure and private access to decentralized P2P trading.",
     },
@@ -18,7 +18,7 @@ export const faqData = [
     {
       question: "Is Aswap Wallet safe to use?",
       answer:
-        "Yes, Aswap Wallet uses industry-standard encryption and never stores your private keys or funds. You remain in full control.",
+        "Yes, Aswap Platform uses smart contracts.",
     },
     {
       question: "What can I trade on the platform?",

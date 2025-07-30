@@ -9,9 +9,8 @@ const getProgressWidth = (step: number) => {
 
 const ProgressSteps = ({ activeStep }: { activeStep: number }) => {
   return (
-    <div className="relative w-full mb-10 h-[80px]">
+    <div className="relative w-full mb-5 md:mb-10 h-[50px] md:h-[80px]">
       <div className="absolute top-[12px] left-0 w-full h-[2px] bg-[#181818]" />
-
       <div
         className="absolute top-[12px] left-0 h-[2px] bg-gradient-to-r from-[#FFFD00] to-[#999800] transition-all duration-300"
         style={{ width: getProgressWidth(activeStep) }}
@@ -37,7 +36,7 @@ const ProgressSteps = ({ activeStep }: { activeStep: number }) => {
             >
               <p className={`p2 font-semibold ${textColor}`}>{id}</p>
             </div>
-            <p className={`p2 text-[#7B7B7B] ${activeStep === id ? "inline text-[white]" : "hidden"} md:inline ${labelWidth}`}>{label}</p>
+            <p className={`p2 text-[#7B7B7B] w-full md:w-fit ${activeStep === id ? "inline text-[white]" : "hidden"} md:inline ${labelWidth}`}>{label}</p>
           </div>
         );
       })}

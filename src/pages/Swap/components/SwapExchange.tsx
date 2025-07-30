@@ -14,17 +14,19 @@ const SwapExchange = () => {
   const handleOpen = () => setOpen(true);
 
   return (
-    <div className="flex flex-col justify-between w-full md:w-[35%] h-[500px] bg-[#0F0F0F] border border-[#181818] p-4 rounded-[12px]">
+    <div className="flex flex-col justify-between w-full md:w-[35%] h-[450px] bg-[#0F0F0F] border border-[#181818] p-4 rounded-[12px]">
       <CustomModalWrapper isOpen={open} onClose={handleClose}>
         <PlaceOrderModal />
       </CustomModalWrapper>
 
-      <div className="flex flex-row items-center justify-between gap-6 md:gap-0">
-        <ButtonToggle
-          options={["Swap", "Limit", "DCA", "VA"]}
-          defaultValue="Swap"
-          onChange={(val) => setSelectedCoin(val)}
-        />
+      <div className="flex flex-row items-center justify-between md:gap-0">
+        <div className="w-[80%] h-full">
+          <ButtonToggle
+            options={["Swap", "Limit", "DCA", "VA"]}
+            defaultValue="Swap"
+            onChange={(val) => setSelectedCoin(val)}
+          />
+        </div>
         <div className="border border-[#181818] h-[45px] w-[45px] flex items-center justify-center rounded-[8px] cursor-pointer">
           <img src="/icons/clock.svg" alt="clock" />
         </div>
@@ -55,25 +57,13 @@ const SwapExchange = () => {
               />
             </div>
           </div>
-          <div className="flex flex-col gap-4">
-            <CustomButton text="Place Limit Offer" className="h-[40px] w-full self-center text-[14px] md:text-[16px]" />
-            <div className="flex flex-row items-center justify-center gap-1">
-              <img src="/icons/arrow.svg" alt="arrow" />
-              <p className="p3 text-[#7B7B7B]">Limit Order Summary</p>
-            </div>
-          </div>
+          <CustomButton text="Swap now" className="h-[40px] w-full self-center text-[14px] md:text-[16px]" />
         </>
       ) : (
         <div className="flex flex-col h-[60%] w-full justify-between">
           <div className="text-[#FFFFFF] h-[96px] bg-[#1D1D1D] rounded-[8px] w-full flex items-center justify-center">Coming soon</div>
           <div className="w-full">
-            <div className="flex flex-col gap-4">
-              <CustomButton text="Place Limit Offer" className="h-[40px] w-full self-center" />
-              <div className="flex flex-row items-center justify-center gap-1">
-                <img src="/icons/arrow.svg" alt="arrow" />
-                <p className="p3 text-[#7B7B7B]">Limit Order Summary</p>
-              </div>
-            </div>
+            <CustomButton text="Swap now" className="h-[40px] w-full self-center text-[14px] md:text-[16px]" />
           </div>
         </div>
       )}

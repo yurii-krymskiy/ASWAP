@@ -14,7 +14,7 @@ const cardData = [
   {
     img: "/images/home-img-6.png",
     title: "Self-Custodial",
-    text: "Not your keys, not your bitcoin. You're in full control of your private keys.",
+    text: "Not your keys, not your bitcoin. You're in full control of your money.",
   },
   {
     img: "/images/home-img-5.png",
@@ -24,12 +24,12 @@ const cardData = [
   {
     img: "/images/home-img-4.png",
     title: "Accessible",
-    text: "CoinJoin with any amount, from 5,000 sats to BTC and anything in between. ASWAP is the coinjoin protocol under the hood that makes it work.",
+    text: "CoinJoin with any amount anything. ASWAP is the coinjoin protocol under the hood that makes it work.",
   },
   {
     img: "/images/home-img-3.png",
     title: "Affordable",
-    text: "Next generation coinjoin protocol, designed with blockspace efficiency as a priority so you save on mining fees.",
+    text: "Next generation coinjoin protocol, designed with blockspace efficiency as a priority so you save on fees.",
   },
 ];
 

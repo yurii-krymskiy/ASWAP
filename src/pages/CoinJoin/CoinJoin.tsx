@@ -16,15 +16,15 @@ const CoinJoin = () => {
   const handleOpen = () => setOpen(true);
 
   return (
-    <main className="w-screen max-w-[1400px] mx-auto px-[16px] md:px-[40px] mt-[40px] mb-15 flex items-center flex-col">
+    <main className="w-screen max-w-[1400px] mx-auto px-[16px] md:px-[40px] mt-6 mb-15 flex items-center flex-col">
       <CustomModalWrapper isOpen={open} onClose={handleClose}>
         <PlaceOrderModal />
       </CustomModalWrapper>
       <section className="flex flex-col w-full md:w-[600px] mb-6">
-        <p className="mb-6 text-[24px] text-[#7B7B7B] font-medium md:text-center">CoinJoin</p>
+        <p className="mb-3 md:mb-6 text-[24px] text-[#7B7B7B] font-medium md:text-center">CoinJoin</p>
         <div className="flex flex-row gap-3 items-start bg-[#0F0F0F] border border-[#181818] mb-4 p-4 rounded-[12px]">
           <img src="/icons/alert-triangle.svg" alt="alert-triangle" />
-          <p className="p1 text-[#7B7B7B]">Convert cash into crypto. Deposit over 65+ fiat currencies to get started with crypto trading.</p>
+          <p className="p1 text-[#7B7B7B]">CoinJoin is an anonymization strategy that protects the privacy of crypto users when they conduct transactions with each other.</p>
         </div>
         <div className="flex flex-col p-4 bg-[#0F0F0F] border border-[#181818] rounded-[12px]">
           <Exchange handleOpen={handleOpen} />
