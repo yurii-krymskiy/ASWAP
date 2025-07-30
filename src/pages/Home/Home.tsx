@@ -15,7 +15,7 @@ const Home = () => {
     <main className="w-screen max-w-[1400px] mx-auto px-[16px] md:px-[40px] mt-[20px] md:mt-[78px]">
       <LightRay side="left" className="w-[200px] left-0 md:w-[400px] md:left-50" />
       <LightRay side="right" className="w-[100px] right-0 md:w-[200px] md:right-75" />
-      <section className="flex gap-8 md:gap-0 flex-col-reverse md:flex-row w-full justify-between mb-20 md:mb-40">
+      <section className="flex gap-8 md:gap-0 flex-col-reverse md:flex-row w-full justify-between mb-20 md:mb-40 overflow-hidden">
         <div className="flex flex-col w-[100%] md:w-[50%] justify-center">
           <InfoTitle text="The Privacy Focused P2P Platform" isDot={false} />
           <GradientTitle text="Get Crypto Now, Instant Purchase Available" classname="text-[32px] md:text-[64px]" />
@@ -28,13 +28,10 @@ const Home = () => {
           <PaymentCarousel />
         </div>
 
-        <div className="flex flex-col w-[100%] md:w-[50%] items-center justify-center absolute right-0">
-          <div className="w-[1200px] h-[100%]">
-            <Spline scene="/robot/scene.splinecode.json" />
-          </div>
+        <div className="flex flex-col w-[100%] md:w-[70%] h-[600px] items-center justify-center absolute right-0">
+          <Spline scene="/robot/scene.splinecode.json" />
         </div>
       </section>
-
 
       <section className="flex flex-col items-center md:mb-[50px]">
         <div className="text-center mb-[32px] md:mb-[64px] flex flex-col items-center">
