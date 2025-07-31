@@ -27,14 +27,14 @@ export const ModalProvider = ({ children }: { children: ReactNode }) => {
       <CustomModalWrapper isOpen={!!modalData.type} onClose={closeModal}>
         {modalData.type === "selectCoin" && (
           <PlaceOrderModal
-            list={coins.slice(0, 2)}
+            list={coins}
             setValue={(modalData.props as { setValue: (v: string | Coin) => void }).setValue}
             onClose={closeModal}
           />
         )}
         {modalData.type === "selectFiat" && (
           <PlaceOrderModal
-            list={currency.slice(0, 3)}
+            list={currency}
             setValue={(modalData.props as { setValue: (v: string | Coin) => void }).setValue}
             onClose={closeModal}
           />

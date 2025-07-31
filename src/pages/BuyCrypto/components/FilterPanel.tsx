@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState } from "react";
 import CustomDropdown from "../../../components/ui/CustomDropdown";
 import ButtonToggle from "../../../components/ui/ButtonToggle";

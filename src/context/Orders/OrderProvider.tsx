@@ -26,7 +26,7 @@ export interface Order {
 
 export const OrdersProvider: React.FC<OrdersProviderProps> = ({ children }) => {
   const [orders, setOrders] = useState<Order[] | null>(null);
-  const [side, setSide] = useState<string>("Buy");
+  const [side, setSide] = useState<"Buy" | "Sell">("Buy");
 
   const contextValue = {
     orders,

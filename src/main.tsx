@@ -20,7 +20,11 @@ import { Buffer } from "buffer";
 import { OrdersProvider } from "./context/Orders/OrderProvider";
 window.Buffer = Buffer;
 
-const wallets = [new PhantomWalletAdapter(), new SolflareWalletAdapter()];
+const wallets = [
+  new PhantomWalletAdapter(),
+  new SolflareWalletAdapter(),
+];
+
 const endpoint = "https://api.devnet.solana.com";
 
 createRoot(document.getElementById("root")!).render(

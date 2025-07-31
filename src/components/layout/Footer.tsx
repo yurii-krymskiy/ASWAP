@@ -7,7 +7,7 @@ const Footer = () => {
   useEffect(() => {
     const updateTime = () => {
       const now = DateTime.now().setZone("Europe/Nicosia");
-      setCyprusTime(now.toFormat("yyyy-MM-dd HH:mm:ss (ZZZ)"));
+      setCyprusTime(now.toFormat("yyyy-MM-dd HH:mm:ss"));
     };
 
     updateTime();
@@ -21,7 +21,7 @@ const Footer = () => {
       <p>CopyRight © 2025 a-swap.xyz. All Rights Reserved.</p>
       <div className="flex flex-row gap-[56px] items-center">
         <p className="w-[200px]">{cyprusTime}</p>
-        <p>24h Volume 3,108,536,331 USDT</p>
+        <p>24h Volume 108,536 USDT</p>
       </div>
     </footer>
   );

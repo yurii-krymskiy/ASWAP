@@ -22,7 +22,6 @@ const CoinJoin = () => {
   const handleDropdownClick = (type: "sell" | "buy") => {
     openModal("selectCoin", {
       setValue: dropdownSetters[type],
-      setValues: () => { }
     });
   };
 
@@ -60,7 +59,7 @@ const CoinJoin = () => {
         </div>
       </section>
       <section className="w-full">
-        <p className="text-[18px] text-[#AEAEB8] mb-4">My Orders</p>
+        <p className="text-[18px] md:text-[24px] text-[#AEAEB8] mb-[18px] md:mb-2">Buy Crypto</p>
         <div className="bg-[#0F0F0F] border border-[#181818] rounded-[12px]">
           <Tabs
             tabs={coinJoinTabs}
