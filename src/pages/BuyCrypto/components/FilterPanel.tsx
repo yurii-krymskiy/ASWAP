@@ -3,19 +3,16 @@ import { useState } from "react";
 import CustomDropdown from "../../../components/ui/CustomDropdown";
 import ButtonToggle from "../../../components/ui/ButtonToggle";
 import currencyList from "../../../json/currency.json";
+import { sortOptions } from "../static/buyCryptoStatic";
+import { useOrders } from "../../../context/Orders/OrderUser";
 
 const FilterPanel = () => {
-  const [side, setSide] = useState("Buy");
   const [currency, setCurrency] = useState("UAH");
   const [paymentMethod, setPaymentMethod] = useState("Monobank");
   const [price, setPrice] = useState("Sort by");
   const [transactionPrice, setTransactionPrice] = useState("");
 
-  const sortOptions = [
-    "Completed order",
-    "Completion rate",
-    "Rating",
-  ];
+  const { side, setSide } = useOrders(v => v);
 
   return (
     <div className="flex flex-col rounded-[12px] md:rounded-[0] md:flex-row gap-4 mb-6 p-3 md:p-0 w-[300px] md:w-fit bg-[#0F0F0F] md:bg-transparent border border-[#181818] md:border-none">

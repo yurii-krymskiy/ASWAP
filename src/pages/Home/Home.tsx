@@ -63,11 +63,11 @@ const Home = () => {
           <img src="/bg/orbit.svg" alt="orbit" className="object-contain w-full" />
         </div>
 
-        <div className="h-[250px] md:h-[450px] flex flex-col justify-end items-center relative pb-10 md:p-0">
-          <div className="w-full h-full md:w-[80%] md:h-[90%] relative bottom-[-100px]" style={{ clipPath: "ellipse(50% 100% at 50% 100%)" }}>
+        <div className="h-[250px] md:h-[450px] flex flex-col justify-end items-center relative pb-10 md:p-0 z-0">
+          <div className="w-[80%] h-[90%] relative bottom-[-100px]" style={{ clipPath: "ellipse(50% 100% at 50% 100%)" }}>
             <div className="relative z-10 flex flex-col items-center justify-center h-full">
               <GradientTitle text="Why Aswap Platform?" classname="text-[24px] md:text-[48px]" />
-              <p className="text-[14px] md:text-[16px] text-[#AEAEB8] mt-3 md:mt-[24px] text-center pb-5 md:pb-0 w-[60%] md:w-[40%]">
+              <p className="text-[14px] md:text-[16px] text-[#AEAEB8] mt-3 md:mt-[24px] text-center md:w-[40%]">
                 Your secure gateway to fast, private, and fully decentralized P2P Platform.
               </p>
             </div>
@@ -82,7 +82,7 @@ const Home = () => {
           />
         </div>
 
-        <div className="gradientDiv p-[15px]">
+        <div className="gradientDiv p-[15px] z-10">
           <HomeCardGrid />
         </div>
       </section>

@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import ProgressCard from "./ProgressCard";
 import StepCircle from "./StepCircle";
 
@@ -21,46 +22,22 @@ const steps = [
 
 const ProgressSteps = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [fillHeight, setFillHeight] = useState(0);
 
-  useEffect(() => {
-    function handleScroll() {
-      if (!containerRef.current) return;
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"], 
+  });
 
-      const container = containerRef.current;
-      const rect = container.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-
-      // Calculate how much of the container is visible in viewport
-      // When container top hits the bottom of viewport => progress = 0
-      // When container bottom hits the top of viewport => progress = 1
-      const totalHeight = rect.height + windowHeight;
-      const visible = windowHeight - rect.top;
-
-      let progress = visible / totalHeight;
-      progress = Math.min(Math.max(progress, 0), 1); // clamp between 0 and 1
-
-      setFillHeight(progress * rect.height);
-    }
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll(); // initialize on mount
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const fillHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
     <div
       ref={containerRef}
       className="relative flex flex-col gap-4 md:gap-[56px] w-full md:w-[70%] md:pl-[72px]"
     >
-      {/* Timeline background line */}
       <div className="hidden md:block absolute top-0 bottom-0 left-[24px] w-[4px] bg-[#0D0D0D]" />
 
-      {/* Timeline fill line */}
-      <div
+      <motion.div
         className="hidden md:block absolute left-[24px] w-[4px] bg-[#FFFD00] origin-top shadow-[0_0_12px_4px_rgba(255,253,0,0.5)]"
         style={{ height: fillHeight }}
       />

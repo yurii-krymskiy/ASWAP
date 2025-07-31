@@ -17,6 +17,7 @@ import { UserProvider } from "./context/User/UserProvider";
 import { ModalProvider } from "./context/Modal/ModalProvider";
 import { PlaceOrderProvider } from "./context/PlaceOrder/PlaceOrderProvider";
 import { Buffer } from "buffer";
+import { OrdersProvider } from "./context/Orders/OrderProvider";
 window.Buffer = Buffer;
 
 const wallets = [new PhantomWalletAdapter(), new SolflareWalletAdapter()];
@@ -25,12 +26,14 @@ const endpoint = "https://api.devnet.solana.com";
 createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
     <ConnectionProvider endpoint={endpoint}>
-      <WalletProvider wallets={wallets} autoConnect>
+      <WalletProvider wallets={wallets} autoConnect={false}>
         <WalletModalProvider>
           <ModalProvider>
             <UserProvider>
               <PlaceOrderProvider>
-                <App />
+                <OrdersProvider>
+                  <App />
+                </OrdersProvider>
               </PlaceOrderProvider>
             </UserProvider>
           </ModalProvider>

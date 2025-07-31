@@ -31,3 +31,9 @@ export const cryptoCards: CryptoCardData[] = [
     text: "Our platform is optimized to handle and support all transaction sizes.",
   },
 ];
+
+export const sortOptions = [
+  "Completed order",
+  "Completion rate",
+  "Rating",
+];

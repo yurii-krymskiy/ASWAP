@@ -1,6 +1,6 @@
 import BuyCryptoGrid from "./components/BuyCryptoGrid";
 import CryptoCard from "./components/CryptoCard";
-import { cryptoCards } from "./static/cryptoCards";
+import { cryptoCards } from "./static/buyCryptoStatic";
 import FilterButton from "../../components/ui/FilterButton";
 import FilterPanel from "./components/FilterPanel";
 import { useModal } from "../../context/Modal/useModal";

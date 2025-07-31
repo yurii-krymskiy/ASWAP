@@ -6,7 +6,7 @@ import bs58 from "bs58";
 import { parseRefreshTokenExpiry } from "../utils/parseRefreshTokenExpiry";
 import { setAccessTokenCookie } from "../utils/setAccessTokenCookie";
 
-const useRequests = () => {
+const useRequestsAuth = () => {
   const { publicKey, signMessage } = useWallet();
   const nonce = useUser(v => v.nonce);
 
@@ -90,4 +90,4 @@ const useRequests = () => {
   };
 };
 
-export default useRequests;
+export default useRequestsAuth;

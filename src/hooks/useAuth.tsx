@@ -2,11 +2,11 @@ import type { WalletName } from "@solana/wallet-adapter-base";
 import { useWallet } from "@solana/wallet-adapter-react";
 import { useCallback, useEffect } from "react";
 import { useUser } from "../context/User/useUser";
-import useRequests from "./useRequests";
+import useRequestsAuth from "./useRequestsAuth";
 
 const useAuth = () => {
   const { publicKey, connected, connect, disconnect, select, wallet } = useWallet();
-  const { fetchNonce, fetchAuth } = useRequests();
+  const { fetchNonce, fetchAuth } = useRequestsAuth();
 
   const setWalletAddress = useUser(v => v.setWallet);
   const nonce = useUser(v => v.nonce);
