@@ -1,24 +1,23 @@
 import { useState } from "react";
 import Chart from "./components/Chart";
-import Tabs from "../../components/ui/Tabs";
 import SwapExchange from "./components/SwapExchange";
 import { swapTabs } from "./static/swapTabs";
 import SwapFilterPanel from "./components/SwapFilterPanel";
 import SwapGrid from "./components/SwapGrid";
-import CustomModalWrapper from "../../components/ui/CustomModalWrapper";
 import FilterButton from "../../components/ui/FilterButton";
+import Tabs from "../../components/features/Tabs";
+import { useModal } from "../../context/Modal/useModal";
 
 const Swap = () => {
   const [activeTab, setActiveTab] = useState("Open Orders");
-  const [open, setOpen] = useState(false);
-  const handleClose = () => setOpen(false);
-  const handleOpen = () => setOpen(true);
+  const openModal = useModal(v => v.openModal);
+
+  const handleOpen = () => {
+    openModal("filterSwap");
+  };
 
   return (
     <main className="w-screen max-w-[1400px] mx-auto px-[16px] md:px-[40px] mt-[40px] mb-15">
-      <CustomModalWrapper isOpen={open} onClose={handleClose}>
-        <SwapFilterPanel />
-      </CustomModalWrapper>
       <section className="flex flex-row gap-6  mb-8 md:mb-4">
         <Chart />
         <SwapExchange />

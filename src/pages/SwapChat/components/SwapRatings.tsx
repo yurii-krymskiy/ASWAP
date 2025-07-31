@@ -1,5 +1,5 @@
+import Stars from "../../../components/features/Stars";
 import AreaChart from "./AreaChart";
-import Stars from "../../../components/ui/Stars";
 import { useState, useEffect } from "react";
 
 const SwapRatings = () => {

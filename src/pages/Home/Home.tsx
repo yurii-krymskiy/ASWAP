@@ -1,16 +1,26 @@
-import InfoTitle from "../../components/ui/InfoTitle";
 import GradientTitle from "../../components/ui/GradientTitle";
 import CustomButton from "../../components/ui/CustomButton";
 import PaymentCarousel from "./components/PaymentCarousel/PaymentCarousel";
-import LightRay from "../../components/ui/LightRay";
 import ProgressSteps from "./components/ProgressCard/ProgressSteps";
 import HomeCardGrid from "./components/HomeCardGrid/HomeCardGrid";
-import GlassCardWrapper from "../../components/ui/GlassCardWrapper";
 import { coinjoinPoints, faqData } from "./static/data";
 import FAQ from "../../components/layout/FAQ";
 import Spline from "@splinetool/react-spline";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import LightRay from "../../components/features/LightRay";
+import InfoTitle from "../../components/features/InfoTitle";
+import GlassCardWrapper from "../../components/features/GlassCardWrapper";
+import { StarsBackground } from "./components/StarsBG/StarsBG";
 
 const Home = () => {
+  const [isLoaded, setIsLoaded] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setIsLoaded(false), 500);
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
     <main className="w-screen max-w-[1400px] mx-auto px-[16px] md:px-[40px] mt-[20px] md:mt-[78px]">
       <LightRay side="left" className="w-[200px] left-0 md:w-[400px] md:left-50" />
@@ -23,12 +33,19 @@ const Home = () => {
             Buy Bitcoin and 70+ cryptos on ASWAP using credit cards, bank transfers, and more.
           </p>
 
-          <CustomButton text="Let's swap!" className="px-6 h-[48px] w-fit text-[14px] md:text-[16px]" />
+          <Link to="/buy-crypto">
+            <CustomButton text="Let's swap!" className="px-6 h-[48px] w-fit text-[14px] md:text-[16px]" />
+          </Link>
 
-          <PaymentCarousel />
+          <div className="w-full">
+            <PaymentCarousel />
+          </div>
         </div>
 
-        <div className="flex flex-col w-[100%] md:w-[70%] h-[600px] items-center justify-center absolute right-0">
+        <div
+          className={`md:flex hidden flex-col w-[100%] md:w-[55%] h-[600px] items-center justify-center absolute right-0 transition-opacity duration-500 ${isLoaded ? "invisible opacity-0" : "visible opacity-100"
+            }`}
+        >
           <Spline scene="/robot/scene.splinecode.json" />
         </div>
       </section>
@@ -42,15 +59,20 @@ const Home = () => {
       </section>
 
       <section className="flex flex-col relative overflow-hidden mb-20 md:mb-50">
-        <div className="hidden md:block absolute rotate-counter w-full top-[50px]">
+        <div className="hidden md:block absolute rotate-counter w-full top-[100px]">
           <img src="/bg/orbit.svg" alt="orbit" className="object-contain w-full" />
         </div>
 
-        <div className="md:bg-[url('/bg/dark-circle.png')] bg-no-repeat bg-cover bg-top h-[250px] md:h-[450px] flex flex-col justify-end items-center relative pb-10 md:p-0">
-          <div className="md:hidden absolute bg-[url('/bg/dark-circle.png')] w-[200%] h-[250px] top-0 bg-cover bg-no-repeat z-[-1]" />
-          <GradientTitle text="Why Aswap Platform?" classname="text-[24px] md:text-[48px]" />
-          <p className="text-[14px] md:text-[16px] text-[#AEAEB8] mt-3 md:mt-[24px] text-center md:w-[40%]">Your secure gateway to fast, private, and fully decentralized P2P Platform.</p>
-          <img src="/bg/stars.png" alt="stars" className="w-[80%] absolute bottom-0 md:static md:w-[40%]" />
+        <div className="h-[250px] md:h-[450px] flex flex-col justify-end items-center relative pb-10 md:p-0">
+          <div className="w-full h-full md:w-[80%] md:h-[90%] relative bottom-[-100px]" style={{ clipPath: "ellipse(50% 100% at 50% 100%)" }}>
+            <div className="relative z-10 flex flex-col items-center justify-center h-full">
+              <GradientTitle text="Why Aswap Platform?" classname="text-[24px] md:text-[48px]" />
+              <p className="text-[14px] md:text-[16px] text-[#AEAEB8] mt-3 md:mt-[24px] text-center pb-5 md:pb-0 w-[60%] md:w-[40%]">
+                Your secure gateway to fast, private, and fully decentralized P2P Platform.
+              </p>
+            </div>
+            <StarsBackground className="absolute inset-0 w-full h-full z-0" />
+          </div>
 
           <div
             className="absolute w-[100px] md:w-[300px] bottom-0 z-10 

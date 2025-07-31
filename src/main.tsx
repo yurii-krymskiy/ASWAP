@@ -9,20 +9,31 @@ import {
   WalletModalProvider,
 } from "@solana/wallet-adapter-react-ui";
 import { PhantomWalletAdapter } from "@solana/wallet-adapter-phantom";
-import { clusterApiUrl } from "@solana/web3.js";
 
 import "@solana/wallet-adapter-react-ui/styles.css";
 import App from "./App";
+import { SolflareWalletAdapter } from "@solana/wallet-adapter-wallets";
+import { UserProvider } from "./context/User/UserProvider";
+import { ModalProvider } from "./context/Modal/ModalProvider";
+import { PlaceOrderProvider } from "./context/PlaceOrder/PlaceOrderProvider";
+import { Buffer } from "buffer";
+window.Buffer = Buffer;
 
-const wallets = [new PhantomWalletAdapter()];
-const network = clusterApiUrl("mainnet-beta");
+const wallets = [new PhantomWalletAdapter(), new SolflareWalletAdapter()];
+const endpoint = "https://api.devnet.solana.com";
 
 createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
-    <ConnectionProvider endpoint={network}>
+    <ConnectionProvider endpoint={endpoint}>
       <WalletProvider wallets={wallets} autoConnect>
         <WalletModalProvider>
-          <App />
+          <ModalProvider>
+            <UserProvider>
+              <PlaceOrderProvider>
+                <App />
+              </PlaceOrderProvider>
+            </UserProvider>
+          </ModalProvider>
         </WalletModalProvider>
       </WalletProvider>
     </ConnectionProvider>

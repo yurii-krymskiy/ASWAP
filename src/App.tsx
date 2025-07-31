@@ -16,7 +16,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/buy" element={<BuyCrypto />} />
+        <Route path="/buy-crypto" element={<BuyCrypto />} />
         <Route path="/swap-chat" element={<SwapChat />} />
         <Route path="/swap" element={<Swap />} />
         <Route path="/online-ads" element={<OnlineAds />} />

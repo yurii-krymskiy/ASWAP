@@ -1,9 +1,9 @@
 import { useState } from "react";
-import ProgressLine from "../../../components/ui/ProgressLine";
-import Tabs from "../../../components/ui/Tabs";
 import { reviewTab } from "../static/tabs";
 import Review from "./Review";
 import Pagination from "../../../components/ui/CustomPagination";
+import ProgressLine from "../../../components/features/ProgressLine";
+import Tabs from "../../../components/features/Tabs";
 
 const Reviews = () => {
   const [activeTab, setActiveTab] = useState("All");

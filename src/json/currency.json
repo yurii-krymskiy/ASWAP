@@ -1,0 +1,236 @@
+[
+  {
+    "code": "USD",
+    "name": "United States Dollar",
+    "symbol": "$",
+    "img": "/fiat/usd.svg"
+  },
+  {
+    "code": "EUR",
+    "name": "Euro",
+    "symbol": "€",
+    "img": "/fiat/eur.svg"
+  },
+  {
+    "code": "UAH",
+    "name": "Ukrainian Hryvnia",
+    "symbol": "₴",
+    "img": "/fiat/uah.svg"
+  },
+  {
+    "code": "JPY",
+    "name": "Japanese Yen",
+    "symbol": "¥",
+    "img": "/fiat/jpy.svg"
+  },
+  {
+    "code": "GBP",
+    "name": "British Pound Sterling",
+    "symbol": "£",
+    "img": "/fiat/gbp.svg"
+  },
+  {
+    "code": "AUD",
+    "name": "Australian Dollar",
+    "symbol": "$",
+    "img": "/fiat/aud.svg"
+  },
+  {
+    "code": "CAD",
+    "name": "Canadian Dollar",
+    "symbol": "$",
+    "img": "/fiat/cad.svg"
+  },
+  {
+    "code": "CHF",
+    "name": "Swiss Franc",
+    "symbol": "CHF",
+    "img": "/fiat/chf.svg"
+  },
+  {
+    "code": "CNY",
+    "name": "Chinese Yuan",
+    "symbol": "¥",
+    "img": "/fiat/cny.svg"
+  },
+  {
+    "code": "SEK",
+    "name": "Swedish Krona",
+    "symbol": "kr",
+    "img": "/fiat/sek.svg"
+  },
+  {
+    "code": "NZD",
+    "name": "New Zealand Dollar",
+    "symbol": "$",
+    "img": "/fiat/nzd.svg"
+  },
+  {
+    "code": "MXN",
+    "name": "Mexican Peso",
+    "symbol": "$",
+    "img": "/fiat/mxn.svg"
+  },
+  {
+    "code": "SGD",
+    "name": "Singapore Dollar",
+    "symbol": "$",
+    "img": "/fiat/sgd.svg"
+  },
+  {
+    "code": "HKD",
+    "name": "Hong Kong Dollar",
+    "symbol": "$",
+    "img": "/fiat/hkd.svg"
+  },
+  {
+    "code": "NOK",
+    "name": "Norwegian Krone",
+    "symbol": "kr",
+    "img": "/fiat/nok.svg"
+  },
+  {
+    "code": "KRW",
+    "name": "South Korean Won",
+    "symbol": "₩",
+    "img": "/fiat/krw.svg"
+  },
+  {
+    "code": "TRY",
+    "name": "Turkish Lira",
+    "symbol": "₺",
+    "img": "/fiat/try.svg"
+  },
+  {
+    "code": "RUB",
+    "name": "Russian Ruble",
+    "symbol": "₽",
+    "img": "/fiat/rub.svg"
+  },
+  {
+    "code": "INR",
+    "name": "Indian Rupee",
+    "symbol": "₹",
+    "img": "/fiat/inr.svg"
+  },
+  {
+    "code": "BRL",
+    "name": "Brazilian Real",
+    "symbol": "R$",
+    "img": "/fiat/brl.svg"
+  },
+  {
+    "code": "ZAR",
+    "name": "South African Rand",
+    "symbol": "R",
+    "img": "/fiat/zar.svg"
+  },
+  {
+    "code": "PLN",
+    "name": "Polish Zloty",
+    "symbol": "zł",
+    "img": "/fiat/pln.svg"
+  },
+  {
+    "code": "CZK",
+    "name": "Czech Koruna",
+    "symbol": "Kč",
+    "img": "/fiat/czk.svg"
+  },
+  {
+    "code": "HUF",
+    "name": "Hungarian Forint",
+    "symbol": "Ft",
+    "img": "/fiat/huf.svg"
+  },
+  {
+    "code": "DKK",
+    "name": "Danish Krone",
+    "symbol": "kr",
+    "img": "/fiat/dkk.svg"
+  },
+  {
+    "code": "AED",
+    "name": "United Arab Emirates Dirham",
+    "symbol": "د.إ",
+    "img": "/fiat/aed.svg"
+  },
+  {
+    "code": "SAR",
+    "name": "Saudi Riyal",
+    "symbol": "ر.س",
+    "img": "/fiat/sar.svg"
+  },
+  {
+    "code": "ILS",
+    "name": "Israeli New Shekel",
+    "symbol": "₪",
+    "img": "/fiat/ils.svg"
+  },
+  {
+    "code": "MYR",
+    "name": "Malaysian Ringgit",
+    "symbol": "RM",
+    "img": "/fiat/myr.svg"
+  },
+  {
+    "code": "THB",
+    "name": "Thai Baht",
+    "symbol": "฿",
+    "img": "/fiat/thb.svg"
+  },
+  {
+    "code": "IDR",
+    "name": "Indonesian Rupiah",
+    "symbol": "Rp",
+    "img": "/fiat/idr.svg"
+  },
+  {
+    "code": "PHP",
+    "name": "Philippine Peso",
+    "symbol": "₱",
+    "img": "/fiat/php.svg"
+  },
+  {
+    "code": "PKR",
+    "name": "Pakistani Rupee",
+    "symbol": "₨",
+    "img": "/fiat/pkr.svg"
+  },
+  {
+    "code": "EGP",
+    "name": "Egyptian Pound",
+    "symbol": "£",
+    "img": "/fiat/egp.svg"
+  },
+  {
+    "code": "NGN",
+    "name": "Nigerian Naira",
+    "symbol": "₦",
+    "img": "/fiat/ngn.svg"
+  },
+  {
+    "code": "ARS",
+    "name": "Argentine Peso",
+    "symbol": "$",
+    "img": "/fiat/ars.svg"
+  },
+  {
+    "code": "CLP",
+    "name": "Chilean Peso",
+    "symbol": "$",
+    "img": "/fiat/clp.svg"
+  },
+  {
+    "code": "COP",
+    "name": "Colombian Peso",
+    "symbol": "$",
+    "img": "/fiat/cop.svg"
+  },
+  {
+    "code": "PEN",
+    "name": "Peruvian Sol",
+    "symbol": "S/",
+    "img": "/fiat/pen.svg"
+  }
+]

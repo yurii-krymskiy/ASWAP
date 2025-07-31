@@ -3,12 +3,12 @@ import { useState } from "react";
 import OnlineAdsHeader from "./components/OnlineAdsHeader";
 import OnlineAdsStats from "./components/OnlineAdsStats";
 import ButtonToggle from "../../components/ui/ButtonToggle";
-import Tabs from "../../components/ui/Tabs";
 import BuyGrid from "./components/BuyGrid";
 import SellGrid from "./components/SellGrid";
 import { tabList } from "./static/tabs";
 import Reviews from "./components/Reviews";
-import TradesInfoMobile from "../../components/ui/TradesInfoMobile";
+import Tabs from "../../components/features/Tabs";
+import TradesInfoMobile from "../../components/features/TradesInfoMobile";
 const OnlineAds = () => {
   const [selectedCoin, setSelectedCoin] = useState("Online Ads");
   const [activeTab, setActiveTab] = useState("Normal");

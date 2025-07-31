@@ -4,7 +4,7 @@ import ProgressSteps from "./components/ProgressSteps";
 import ThirdStep from "./components/ThirdStep";
 import FirstStep from "./components/FirstStep";
 import SecondStep from "./components/SecondStep";
-import Tabs from "../../components/ui/Tabs";
+import Tabs from "../../components/features/Tabs";
 
 const P2P = () => {
   const [activeStep, setActiveStep] = useState(1);

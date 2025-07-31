@@ -1,0 +1,40 @@
+[
+  { "code": "VISA", "name": "Visa", "type": "card" },
+  { "code": "MASTERCARD", "name": "MasterCard", "type": "card" },
+  { "code": "AMEX", "name": "American Express", "type": "card" },
+  { "code": "DISCOVER", "name": "Discover", "type": "card" },
+  { "code": "JCB", "name": "JCB", "type": "card" },
+  { "code": "DINERS", "name": "Diners Club", "type": "card" },
+
+  { "code": "APPLE_PAY", "name": "Apple Pay", "type": "wallet" },
+  { "code": "GOOGLE_PAY", "name": "Google Pay", "type": "wallet" },
+  { "code": "SAMSUNG_PAY", "name": "Samsung Pay", "type": "wallet" },
+
+  { "code": "PAYPAL", "name": "PayPal", "type": "wallet" },
+  { "code": "SKRILL", "name": "Skrill", "type": "wallet" },
+  { "code": "NETELLER", "name": "Neteller", "type": "wallet" },
+  { "code": "PAYSEND", "name": "Paysend", "type": "wallet" },
+  { "code": "PAYONEER", "name": "Payoneer", "type": "wallet" },
+  { "code": "REVOLUT", "name": "Revolut", "type": "wallet" },
+  { "code": "WISE", "name": "Wise (TransferWise)", "type": "wallet" },
+
+  { "code": "SEPA", "name": "SEPA Transfer", "type": "bank" },
+  { "code": "SWIFT", "name": "SWIFT Transfer", "type": "bank" },
+  { "code": "ACH", "name": "ACH Transfer", "type": "bank" },
+  { "code": "WIRE", "name": "Wire Transfer", "type": "bank" },
+  { "code": "LOCAL_BANK", "name": "Local Bank Transfer", "type": "bank" },
+
+  { "code": "BTC", "name": "Bitcoin", "type": "crypto" },
+  { "code": "ETH", "name": "Ethereum", "type": "crypto" },
+  { "code": "USDT", "name": "Tether", "type": "crypto" },
+  { "code": "USDC", "name": "USD Coin", "type": "crypto" },
+  { "code": "BNB", "name": "Binance Coin", "type": "crypto" },
+
+  { "code": "CASH", "name": "Cash Payment", "type": "cash" },
+  { "code": "CASH_ON_DELIVERY", "name": "Cash on Delivery", "type": "cash" },
+
+  { "code": "ALIPAY", "name": "Alipay", "type": "wallet" },
+  { "code": "WECHAT", "name": "WeChat Pay", "type": "wallet" },
+  { "code": "GCASH", "name": "Gcash", "type": "wallet" },
+  { "code": "MPESA", "name": "M-Pesa", "type": "wallet" }
+]

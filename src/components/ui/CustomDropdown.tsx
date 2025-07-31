@@ -5,12 +5,24 @@ type CustomDropdownProps = {
   selectedText: string;
   options: string[];
   setSelectedType: (v: string) => void;
-  height: string,
-  icon?: string
+  height: string;
+  icon?: string;
   className?: string;
+
+  dropdownEnabled?: boolean; 
+  onModalOpen?: () => void;  
 };
 
-const CustomDropdown: React.FC<CustomDropdownProps> = ({ selectedText, options, setSelectedType, height, icon, className }) => {
+const CustomDropdown: React.FC<CustomDropdownProps> = ({
+  selectedText,
+  options,
+  setSelectedType,
+  height,
+  icon,
+  className,
+  dropdownEnabled = true,
+  onModalOpen,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -25,7 +37,14 @@ const CustomDropdown: React.FC<CustomDropdownProps> = ({ selectedText, options, 
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const toggleDropdown = () => setIsOpen(!isOpen);
+  const toggleDropdown = () => {
+    if (!dropdownEnabled) {
+      onModalOpen?.();
+      return;
+    }
+
+    setIsOpen(!isOpen);
+  };
 
   const onSelect = (option: string) => {
     setSelectedType(option);
@@ -33,9 +52,12 @@ const CustomDropdown: React.FC<CustomDropdownProps> = ({ selectedText, options, 
   };
 
   return (
-    <div className="relative" style={{ height: height }} ref={dropdownRef}>
+    <div className="relative h-full" style={{ height: height }} ref={dropdownRef}>
       <div
-        className={clsx("bg-[#0F0F0F] border border-[#181818] rounded-[8px] flex flex-row h-full items-center px-[12px] justify-between text-[#AEAEB8]", className)}
+        className={clsx(
+          "bg-[#0F0F0F] border border-[#181818] rounded-[8px] flex flex-row h-full items-center px-[12px] justify-between text-[#AEAEB8]",
+          className
+        )}
         onClick={toggleDropdown}
       >
         <div className="flex flex-row items-center gap-2">
@@ -44,11 +66,22 @@ const CustomDropdown: React.FC<CustomDropdownProps> = ({ selectedText, options, 
           )}
           <span className="text-[14px] md:text-[16px] font-normal">{selectedText}</span>
         </div>
-        <img src="/icons/arrow-white.svg" alt="arrow" width={12} height={12} className="cursor-pointer" />
+        <img
+          src="/icons/arrow-white.svg"
+          alt="arrow"
+          width={12}
+          height={12}
+          className="cursor-pointer"
+        />
       </div>
 
-      {isOpen && (
-        <div className={clsx("absolute mt-1 w-full max-h-60 overflow-auto rounded-[8px] bg-[#0F0F0F] border border-[#181818] z-10", className)}>
+      {isOpen && dropdownEnabled && (
+        <div
+          className={clsx(
+            "absolute mt-1 w-full max-h-60 overflow-auto rounded-[8px] bg-[#0F0F0F] border border-[#181818] z-20",
+            className
+          )}
+        >
           {options.map((option) => (
             <div
               key={option}

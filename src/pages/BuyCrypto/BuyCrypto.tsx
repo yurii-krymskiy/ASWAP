@@ -1,27 +1,23 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import { useState } from "react";
 import BuyCryptoGrid from "./components/BuyCryptoGrid";
 import CryptoCard from "./components/CryptoCard";
 import { cryptoCards } from "./static/cryptoCards";
-import CustomModalWrapper from "../../components/ui/CustomModalWrapper";
 import FilterButton from "../../components/ui/FilterButton";
 import FilterPanel from "./components/FilterPanel";
+import { useModal } from "../../context/Modal/useModal";
 
 const BuyCrypto = () => {
-  const [open, setOpen] = useState(false);
+  const openModal = useModal(v => v.openModal);
 
-  const handleClose = () => setOpen(false);
-  const handleOpen = () => setOpen(true);
+  const handleOpenModal = () => {
+    openModal("filterBuyCrypto");
+  };
 
   return (
     <main className="w-screen max-w-[1400px] mx-auto px-[16px] md:px-[40px] mt-[20px] md:mt-[40px]">
-      <CustomModalWrapper isOpen={open} onClose={handleClose}>
-        <FilterPanel />
-      </CustomModalWrapper>
       <section className="flex flex-col mb-8 md:mb-25">
         <div className="flex flex-row items-center justify-between mb-[18px] md:mb-8">
           <p className="text-[18px] md:text-[24px] text-[#AEAEB8]">Buy Crypto</p>
-          <FilterButton handleOpen={handleOpen} />
+          <FilterButton handleOpen={handleOpenModal} />
         </div>
         <div className="hidden md:block">
           <FilterPanel />

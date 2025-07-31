@@ -49,3 +49,4 @@ const PaymentCarousel = () => {
 };
 
 export default PaymentCarousel;
+

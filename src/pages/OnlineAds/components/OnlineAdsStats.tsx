@@ -1,6 +1,6 @@
 import StatsCard from "./StatsCard";
 import { stats } from "../static/stats";
-import Stars from "../../../components/ui/Stars";
+import Stars from "../../../components/features/Stars";
 
 const OnlineAdsStats = () => {
   return (

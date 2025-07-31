@@ -1,6 +1,6 @@
 import CustomButton from "../../../components/ui/CustomButton";
 import BorderButton from "../../../components/ui/BorderButton";
-import Feedback from "../../../components/ui/Feedback";
+import Feedback from "../../../components/features/Feedback";
 
 const OnlineAdsHeader = () => {
   return (

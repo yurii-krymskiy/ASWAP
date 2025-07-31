@@ -33,6 +33,37 @@
   .p3 {
     @apply text-[10px] font-normal leading-[130%] tracking-normal;
   }
+
+  /* Custom scrollbar styles */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #202020;
+    border-radius: 10px;
+  }
+
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #202020 transparent;
+  }
+
+  input.no-spinner::-webkit-outer-spin-button,
+  input.no-spinner::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input.no-spinner[type="number"] {
+    -moz-appearance: textfield;
+  }
 }
 
 @layer components {
@@ -49,6 +80,7 @@
       0 4px 8px rgba(0, 0, 0, 0.2), 
       inset 0 1px 4px rgba(255, 255, 255, 0.15);
   }
+
   @keyframes rotate-counter {
     from {
       transform: rotate(0deg);

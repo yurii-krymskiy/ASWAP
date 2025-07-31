@@ -1,5 +1,5 @@
+import Feedback from "../../../components/features/Feedback";
 import ToggleSwitch from "../../../components/ui/ToggleSwitch";
-import Feedback from "../../../components/ui/Feedback";
 
 const MyAccountHeader = () => {
   return (

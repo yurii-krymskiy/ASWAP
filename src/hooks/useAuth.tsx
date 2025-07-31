@@ -1,10 +1,15 @@
 import type { WalletName } from "@solana/wallet-adapter-base";
 import { useWallet } from "@solana/wallet-adapter-react";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect } from "react";
+import { useUser } from "../context/User/useUser";
+import useRequests from "./useRequests";
 
 const useAuth = () => {
   const { publicKey, connected, connect, disconnect, select, wallet } = useWallet();
-  const [walletAddress, setWalletAddress] = useState<string | null>(null);
+  const { fetchNonce, fetchAuth } = useRequests();
+
+  const setWalletAddress = useUser(v => v.setWallet);
+  const nonce = useUser(v => v.nonce);
 
   const connectWallet = useCallback(async () => {
     try {
@@ -27,9 +32,16 @@ const useAuth = () => {
 
   useEffect(() => {
     if (publicKey) {
-      setWalletAddress(publicKey?.toBase58());
+      setWalletAddress(publicKey.toBase58());
+      fetchNonce();
     }
   }, [publicKey]);
+
+  useEffect(() => {
+    if (nonce) {
+      fetchAuth();
+    }
+  }, [nonce]);
 
   return {
     wallet,
@@ -37,7 +49,6 @@ const useAuth = () => {
     connected,
     connectWallet,
     disconnectWallet,
-    walletAddress
   };
 };
 

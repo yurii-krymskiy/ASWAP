@@ -1,37 +1,53 @@
-import { useState } from "react";
 import CustomDropdown from "../../../components/ui/CustomDropdown";
 import CustomTextArea from "../../../components/ui/CustomTextArea";
 import CustomCheckboxLabel from "../../../components/ui/CustomCheckboxLabel";
 import ToggleButtons from "./ToggleCheckButtons";
 import BorderButton from "../../../components/ui/BorderButton";
 import CustomButton from "../../../components/ui/CustomButton";
+import TagInput from "./TagInput";
+import { usePlaceOrder } from "../../../context/PlaceOrder/usePlaceOrder";
+import useCreateOrder from "../../../hooks/useCreateOrder";
 
 const ThirdStep = ({ onPrev }: { onPrev: () => void }) => {
-  const [asstetType, setAsstetType] = useState("Add Tags");
-  const [regions, setRegions] = useState("");
-  const [active, setActive] = useState(false);
+  const { tags,
+    setTags,
+    regions,
+    setRegions,
+    counterParty,
+    setCounterParty,
+    holdings,
+    setHoldings,
+    refferals,
+    setRefferals,
+    autoReply,
+    setAutoReply,
+  } = usePlaceOrder(v => v);
+
+  const { handleSubmit } = useCreateOrder();
 
   return (
     <div className="p-3 pt-4 md:p-4">
       <div className="flex flex-col mb-4">
         <p className="p2 text-[#7B7B7B] mb-2">Terms Tags (Optional)</p>
-        <CustomDropdown
-          height="45px"
-          selectedText={asstetType}
-          options={["0"]}
-          setSelectedType={setAsstetType}
-          className="w-full bg-[#1D1D1D] border-[#181818] text-[#7B7B7B]"
-        />
+        <TagInput tags={tags} setTags={setTags} />
       </div>
 
       <div className="flex flex-col mb-4">
         <p className="p2 text-[#7B7B7B] mb-2">Refferals (Optional)</p>
-        <CustomTextArea />
+        <CustomTextArea
+          value={refferals}
+          onChange={setRefferals}
+          placeholder="Add referral code..."
+        />
       </div>
 
       <div className="flex flex-col mb-4">
         <p className="p2 text-[#7B7B7B] mb-2">Auto Reply (Optional)</p>
-        <CustomTextArea />
+        <CustomTextArea
+          value={autoReply}
+          onChange={setAutoReply}
+          placeholder="Auto reply message..."
+        />
       </div>
 
       <div className="flex flex-col mb-4">
@@ -50,8 +66,8 @@ const ThirdStep = ({ onPrev }: { onPrev: () => void }) => {
         <div className="flex flex-row gap-4 items-center">
           <div className="flex flex-row gap-2 items-center">
             <CustomCheckboxLabel
-              isChecked={active}
-              onChange={setActive}
+              isChecked={counterParty}
+              onChange={setCounterParty}
               label="Registered"
             />
             <div className="bg-[#1D1D1D] border-[#181818] border rounded-[8px] h-[38px] px-4 p1 text-[#7B7B7B] flex items-center justify-start w-[80px]">
@@ -65,8 +81,8 @@ const ThirdStep = ({ onPrev }: { onPrev: () => void }) => {
         <div className="flex flex-row gap-4 items-center">
           <div className="flex flex-row gap-2 items-center">
             <CustomCheckboxLabel
-              isChecked={active}
-              onChange={setActive}
+              isChecked={holdings}
+              onChange={setHoldings}
               label="Holdings more than"
             />
             <div className="bg-[#1D1D1D] border-[#181818] border rounded-[8px] h-[38px] px-4 p1 text-[#7B7B7B] flex items-center justify-start w-[151px]">
@@ -93,6 +109,7 @@ const ThirdStep = ({ onPrev }: { onPrev: () => void }) => {
           onClick={onPrev}
         />
         <CustomButton
+          onClick={handleSubmit}
           text="Post"
           className="w-[50%] text-[14px] md:text-[16px]"
         />

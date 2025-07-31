@@ -1,6 +1,6 @@
 import { useState } from "react";
-import GlassCardWrapper from "../../../../components/ui/GlassCardWrapper";
 import CurrencyButton from "../../../../components/ui/CurrencyButton";
+import GlassCardWrapper from "../../../../components/features/GlassCardWrapper";
 
 const ExchangeBlock = () => {
   const [side, setSide] = useState<"Sell" | "Buy">("Buy");

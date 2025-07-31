@@ -1,4 +1,4 @@
-import InfoTitle from "../../../../components/ui/InfoTitle";
+import InfoTitle from "../../../../components/features/InfoTitle";
 import GradientTitle from "../../../../components/ui/GradientTitle";
 
 const ProgressCard = (
